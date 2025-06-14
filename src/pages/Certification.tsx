@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Eye, Award, Calendar, CheckCircle } from "lucide-react";
+import { Eye, Award, Calendar, CheckCircle, Shield } from "lucide-react";
 
 const Certification = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
