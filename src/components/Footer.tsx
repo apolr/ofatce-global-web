@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
@@ -9,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/83ac60f5-dae5-4126-90cc-4e8bc6dc14e9.png" 
+              src="/lovable-uploads/c8ae3d42-cb6b-4177-b497-e1f1ac934c2c.png" 
               alt="Ofatce Global Limited" 
               className="h-12 w-auto object-contain"
             />
