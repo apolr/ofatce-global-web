@@ -1,45 +1,56 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Monitor, Network, Factory, Users, Package, Paintbrush } from "lucide-react";
+import { Monitor, Network, Factory, Shield, Users, Package, Video, Home } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      id: "audiovisual",
-      icon: Monitor,
-      title: "Audiovisual & Unified Communications",
-      description: "Comprehensive AV solutions including boardroom systems, video conferencing, digital signage, and unified communications platforms. We design, install, and maintain cutting-edge audiovisual infrastructure that enhances collaboration and communication across your organization with seamless integration and user-friendly interfaces."
-    },
-    {
       id: "networking",
       icon: Network,
-      title: "Enterprise Networking & Cyber-Security",
-      description: "Robust networking infrastructure including structured cabling, enterprise switching, wireless solutions, and comprehensive cybersecurity measures. Our solutions ensure reliable connectivity, data protection, and network optimization to keep your operations running smoothly while maintaining the highest security standards."
+      title: "Structured Cabling & Enterprise Networking",
+      problem: "Wi-Fi drops, slow file transfers, spaghetti cabinets",
+      outcome: "Documented fibre/copper layouts, redundant switching, 99.99% uptime",
+      description: "Professional network infrastructure design and deployment including structured cabling, enterprise switching, and comprehensive documentation. We eliminate connectivity issues and ensure reliable, high-performance networks that scale with your business."
     },
     {
-      id: "fabrication",
-      icon: Factory,
-      title: "Fabrication & EPC (Oil-&-Gas)",
-      description: "Specialized fabrication services for the oil and gas industry including mudmat frames, process skids, manifolds, and complete EPC solutions. We deliver turnkey engineering, procurement, and construction services with proven expertise in upstream, midstream, and downstream operations while maintaining strict safety protocols."
+      id: "audiovisual",
+      icon: Monitor,
+      title: "Audiovisual Systems",
+      problem: "Clients can't hear or see presentations clearly",
+      outcome: "Theatre-quality sound & visuals, intuitive room control",
+      description: "Complete audiovisual solutions for boardrooms, auditoriums, and presentation spaces. Our systems deliver crystal-clear audio and visuals with user-friendly controls that make every presentation impactful."
     },
     {
-      id: "project-management",
-      icon: Users,
-      title: "Project Management & Manpower Supply",
-      description: "Professional project management services and skilled manpower supply across all engineering disciplines. Our experienced team ensures projects are delivered on time, within budget, and to the highest quality standards while providing qualified personnel for short-term and long-term assignments with comprehensive training and support."
+      id: "video-conferencing",
+      icon: Video,
+      title: "Video-Conferencing",
+      problem: "15 min wasted per call fighting setup",
+      outcome: "One-touch join with Cisco, Zoom, Teams or Logitech—meetings start on time",
+      description: "Seamless video conferencing solutions that eliminate technical delays. Our systems integrate with all major platforms and provide one-touch joining for efficient, productive meetings."
     },
     {
-      id: "procurement",
-      icon: Package,
-      title: "Procurement & Logistics",
-      description: "Strategic procurement and logistics management services that optimize supply chains and reduce costs. We handle vendor management, sourcing, quality assurance, and delivery coordination to ensure timely availability of materials and equipment while maintaining compliance with local content requirements and international standards."
+      id: "security-operations",
+      icon: Shield,
+      title: "Security Operations Centre (SOC)",
+      problem: "Breaches discovered weeks late",
+      outcome: "24×7 monitoring, SIEM correlation, response playbooks—MTTD in minutes",
+      description: "Advanced security monitoring and incident response services. Our SOC provides round-the-clock protection with rapid threat detection and automated response capabilities."
     },
     {
-      id: "sandblasting",
-      icon: Paintbrush,
-      title: "Sand-blasting & Industrial Painting",
-      description: "Professional surface preparation and protective coating services for industrial applications. Our sand-blasting and painting services ensure optimal surface treatment, corrosion protection, and aesthetic finishing for equipment, structures, and facilities with environmentally compliant processes and durable coating systems."
+      id: "automation",
+      icon: Home,
+      title: "Residential & Commercial Automation",
+      problem: "Lights, blinds, HVAC all manual",
+      outcome: "App-controlled scenes, occupancy sensors, energy dashboards",
+      description: "Smart building automation solutions that provide centralized control over lighting, climate, security, and energy systems. Increase comfort, security, and energy efficiency."
     }
+  ];
+
+  const addOns = [
+    "Maintenance SLAs",
+    "Hardware Procurement", 
+    "Staff Training",
+    "On-site Support"
   ];
 
   return (
@@ -49,10 +60,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-on-scroll">
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
-              Our Engineering Services
+              Our Five Service Pillars
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              Comprehensive engineering solutions across audiovisual, networking, and oil & gas sectors, delivered with excellence and precision.
+              Comprehensive technology solutions that drive real business outcomes
             </p>
           </div>
         </div>
@@ -61,22 +72,37 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-12">
             {services.map((service, index) => (
               <Card 
                 key={service.id} 
                 id={service.id}
-                className="card-hover animate-on-scroll bg-white shadow-lg border-0 scroll-mt-24"
+                className="card-hover animate-on-scroll bg-white shadow-lg border-0"
               >
                 <CardContent className="p-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <service.icon className="h-8 w-8 text-accent" />
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div className="lg:col-span-2 flex justify-center lg:justify-start">
+                      <div className="w-20 h-20 bg-accent/10 rounded-lg flex items-center justify-center">
+                        <service.icon className="h-10 w-10 text-accent" />
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-poppins font-semibold text-primary mb-4">
+                    
+                    <div className="lg:col-span-10">
+                      <h3 className="text-2xl font-poppins font-semibold text-primary mb-4">
                         {service.title}
                       </h3>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                          <h4 className="font-roboto font-semibold text-red-600 mb-2">Problem we solve:</h4>
+                          <p className="text-gray-600">{service.problem}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-roboto font-semibold text-green-600 mb-2">Outcome for you:</h4>
+                          <p className="text-gray-600">{service.outcome}</p>
+                        </div>
+                      </div>
+                      
                       <p className="text-gray-600 leading-relaxed">
                         {service.description}
                       </p>
@@ -89,36 +115,30 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Service Features */}
+      {/* Add-ons Section */}
       <section className="py-20 bg-light-grey">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
-              Why Choose Our Services
+              Additional Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our comprehensive approach ensures quality, reliability, and value in every project
+              Comprehensive support services to maximize your technology investment
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Quality Assured", description: "ISO 9001 certified processes ensure consistent quality delivery" },
-              { title: "Local Expertise", description: "Deep understanding of Nigerian market and regulatory requirements" },
-              { title: "24/7 Support", description: "Round-the-clock technical support and maintenance services" },
-              { title: "Proven Track Record", description: "Successfully completed projects across multiple industries" }
-            ].map((feature, index) => (
-              <div key={index} className="text-center animate-on-scroll">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-poppins font-bold">{index + 1}</span>
-                </div>
-                <h4 className="font-poppins font-semibold text-primary mb-2">
-                  {feature.title}
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  {feature.description}
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {addOns.map((addon, index) => (
+              <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-poppins font-bold">+</span>
+                  </div>
+                  <h4 className="font-poppins font-semibold text-primary">
+                    {addon}
+                  </h4>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -128,15 +148,15 @@ const Services = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center animate-on-scroll">
           <h2 className="text-responsive-3xl font-poppins font-bold mb-6">
-            Ready to Discuss Your Project?
+            Ready to Transform Your Technology Infrastructure?
           </h2>
           <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
-            Contact our engineering experts to learn how we can help you achieve your project goals.
+            Let's discuss how our service pillars can drive outcomes for your organization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="inline-block">
               <button className="bg-accent hover:bg-accent/90 text-white font-roboto font-medium px-8 py-3 text-lg rounded-md transition-colors">
-                Request Consultation
+                Book Discovery Call
               </button>
             </a>
             <a href="tel:+2348028636198" className="inline-block">

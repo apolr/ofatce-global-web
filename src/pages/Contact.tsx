@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Calendar } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -16,7 +16,8 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    message: "",
+    projectBrief: "",
+    preferredCallTime: "",
     gdprConsent: false
   });
 
@@ -50,10 +51,7 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // In a real implementation, this would integrate with SendGrid API
       console.log("Form data:", formData);
-      
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       toast({
@@ -61,12 +59,12 @@ const Contact = () => {
         description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
       });
       
-      // Reset form
       setFormData({
         name: "",
         email: "",
         phone: "",
-        message: "",
+        projectBrief: "",
+        preferredCallTime: "",
         gdprConsent: false
       });
       
@@ -88,10 +86,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-on-scroll">
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
-              Contact Us
+              Let's Start the Conversation
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              Ready to discuss your project? Get in touch with our engineering experts and discover how we can help bring your vision to life.
+              Remove all friction to discuss your technology needs with our experts
             </p>
           </div>
         </div>
@@ -106,7 +104,7 @@ const Contact = () => {
               <Card className="bg-white shadow-lg border-0">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-poppins font-bold text-primary mb-6">
-                    Send us a Message
+                    Book Your Free 30-Minute Discovery Call
                   </h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -129,7 +127,7 @@ const Contact = () => {
                       
                       <div>
                         <Label htmlFor="phone" className="text-sm font-roboto font-medium text-gray-700">
-                          Phone Number
+                          Phone Number *
                         </Label>
                         <Input
                           id="phone"
@@ -137,6 +135,7 @@ const Contact = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={handleInputChange}
+                          required
                           className="mt-1"
                           placeholder="+234 XXX XXX XXXX"
                         />
@@ -160,18 +159,33 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <Label htmlFor="message" className="text-sm font-roboto font-medium text-gray-700">
-                        Message *
+                      <Label htmlFor="projectBrief" className="text-sm font-roboto font-medium text-gray-700">
+                        Project Brief *
                       </Label>
                       <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
+                        id="projectBrief"
+                        name="projectBrief"
+                        value={formData.projectBrief}
                         onChange={handleInputChange}
                         required
-                        rows={6}
+                        rows={4}
                         className="mt-1"
-                        placeholder="Tell us about your project requirements..."
+                        placeholder="Brief description of your technology needs or challenges..."
+                      />
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="preferredCallTime" className="text-sm font-roboto font-medium text-gray-700">
+                        Preferred Call Time
+                      </Label>
+                      <Input
+                        id="preferredCallTime"
+                        name="preferredCallTime"
+                        type="text"
+                        value={formData.preferredCallTime}
+                        onChange={handleInputChange}
+                        className="mt-1"
+                        placeholder="e.g., Monday 2-4 PM, Tuesday morning"
                       />
                     </div>
                     
@@ -183,9 +197,8 @@ const Contact = () => {
                         className="mt-1"
                       />
                       <Label htmlFor="gdpr" className="text-sm text-gray-600 leading-relaxed">
-                        I consent to the processing of my personal data in accordance with the privacy policy. 
-                        Ofatce Global Limited will use this information to respond to my inquiry and may contact me 
-                        about related services. *
+                        I consent to OFATCE Global Limited processing my personal data to respond to my inquiry 
+                        and contact me about related services. *
                       </Label>
                     </div>
                     
@@ -196,11 +209,11 @@ const Contact = () => {
                       size="lg"
                     >
                       {isSubmitting ? (
-                        "Sending..."
+                        "Booking Your Call..."
                       ) : (
                         <>
-                          <Send className="h-5 w-5 mr-2" />
-                          Send Message
+                          <Calendar className="h-5 w-5 mr-2" />
+                          Book Discovery Call
                         </>
                       )}
                     </Button>
@@ -227,7 +240,7 @@ const Contact = () => {
                         <div>
                           <h4 className="font-roboto font-medium text-gray-800 mb-1">Office Address</h4>
                           <p className="text-gray-600 text-sm leading-relaxed">
-                            #60 Slaughter Rd., Off Peter-Odili Rd.,<br />
+                            6 Wals Street, By Odili Road,<br />
                             Port Harcourt, Rivers State, Nigeria
                           </p>
                         </div>
@@ -251,8 +264,11 @@ const Contact = () => {
                           <Mail className="h-5 w-5 text-accent" />
                         </div>
                         <div>
-                          <h4 className="font-roboto font-medium text-gray-800 mb-1">Email Address</h4>
-                          <p className="text-gray-600 text-sm">info@ofatceglobal.com</p>
+                          <h4 className="font-roboto font-medium text-gray-800 mb-1">Email Addresses</h4>
+                          <div className="text-gray-600 text-sm space-y-1">
+                            <p>info@ofatceglobal.com</p>
+                            <p>ofatceglobal@yahoo.co.uk</p>
+                          </div>
                         </div>
                       </div>
                       
@@ -282,7 +298,7 @@ const Contact = () => {
                       allowFullScreen={true}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Ofatce Global Limited Office Location"
+                      title="OFATCE Global Limited Office Location"
                     ></iframe>
                   </div>
                   <CardContent className="p-4">
@@ -297,22 +313,20 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Emergency Contact */}
+      {/* Secondary CTA */}
       <section className="py-16 bg-accent text-white">
         <div className="container mx-auto px-4 text-center animate-on-scroll">
           <h2 className="text-2xl font-poppins font-bold mb-4">
-            24/7 Emergency Support
+            Need Immediate Technical Assessment?
           </h2>
           <p className="text-lg mb-6 text-gray-100">
-            For urgent technical support or emergency situations, our team is available around the clock.
+            Request a free network health snapshot and discover optimization opportunities
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+2348028636198" className="inline-block">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-roboto font-medium">
-                <Phone className="h-5 w-5 mr-2" />
-                Call Emergency Line
-              </Button>
-            </a>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-roboto font-medium">
+              <Send className="h-5 w-5 mr-2" />
+              Request Network Health Snapshot
+            </Button>
             <a href="https://wa.me/2348028636198" target="_blank" rel="noopener noreferrer" className="inline-block">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-accent font-roboto font-medium">
                 WhatsApp Support

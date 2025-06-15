@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -11,9 +12,10 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about-us" },
     { name: "Services", path: "/services" },
+    { name: "Industries", path: "/industries" },
     { name: "Portfolio", path: "/portfolio" },
-    { name: "Quality Policy", path: "/quality-policy" },
-    { name: "Certification", path: "/certification" },
+    { name: "Quality", path: "/quality-policy" },
+    { name: "Why OFATCE", path: "/why-ofatce" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -27,18 +29,18 @@ const Header = () => {
           <Link to="/" className="flex-shrink-0">
             <img 
               src="/lovable-uploads/83ac60f5-dae5-4126-90cc-4e8bc6dc14e9.png" 
-              alt="Ofatce Global Limited" 
+              alt="OFATCE Global Limited" 
               className="h-12 md:h-16 w-auto object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-roboto font-medium transition-colors hover:text-accent ${
+                className={`font-roboto font-medium transition-colors hover:text-accent text-sm ${
                   isActive(item.path)
                     ? "text-accent border-b-2 border-accent pb-1"
                     : "text-gray-700"
@@ -53,7 +55,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/contact">
               <Button className="bg-accent hover:bg-accent/90 text-white font-roboto font-medium">
-                Request Quote
+                Book Discovery Call
               </Button>
             </Link>
           </div>
@@ -96,7 +98,7 @@ const Header = () => {
                 className="mt-4"
               >
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Request Quote
+                  Book Discovery Call
                 </Button>
               </Link>
             </nav>
