@@ -1,19 +1,12 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-white">
+  return <footer className="bg-primary text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img 
-              src="/lovable-uploads/c8ae3d42-cb6b-4177-b497-e1f1ac934c2c.png" 
-              alt="Ofatce Global Limited" 
-              className="h-12 w-auto object-contain"
-            />
+            <img src="/lovable-uploads/c8ae3d42-cb6b-4177-b497-e1f1ac934c2c.png" alt="Ofatce Global Limited" className="h-12 w-auto object-contain" />
             <p className="text-gray-300 text-sm leading-relaxed">
               Modern solutions for Audiovisual, Networking & Oil-and-Gas industries. 
               Delivering end-to-end engineering services since 2011.
@@ -24,22 +17,26 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-poppins font-semibold text-lg">Quick Links</h4>
             <ul className="space-y-2">
-              {[
-                { name: "About Us", path: "/about-us" },
-                { name: "Services", path: "/services" },
-                { name: "Portfolio", path: "/portfolio" },
-                { name: "Quality Policy", path: "/quality-policy" },
-                { name: "Certification", path: "/certification" },
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-accent transition-colors text-sm"
-                  >
+              {[{
+              name: "About Us",
+              path: "/about-us"
+            }, {
+              name: "Services",
+              path: "/services"
+            }, {
+              name: "Portfolio",
+              path: "/portfolio"
+            }, {
+              name: "Quality Policy",
+              path: "/quality-policy"
+            }, {
+              name: "Certification",
+              path: "/certification"
+            }].map(link => <li key={link.name}>
+                  <Link to={link.path} className="text-gray-300 hover:text-accent transition-colors text-sm">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -88,9 +85,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-300 text-sm">
-              © 2024 Ofatce Global Limited. All rights reserved.
-            </p>
+            <p className="text-gray-300 text-sm">© 2025 Ofatce Global Limited. All rights reserved.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-300">
               <span>ISO 9001 Certified</span>
               <span>Nigerian Local Content</span>
@@ -99,8 +94,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
