@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -26,17 +25,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl font-poppins">O</span>
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-lg font-poppins font-bold text-primary">
-                  Ofatce Global
-                </h1>
-                <p className="text-xs text-gray-600 -mt-1">Engineering Services</p>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/83ac60f5-dae5-4126-90cc-4e8bc6dc14e9.png" 
+              alt="Ofatce Global Limited" 
+              className="h-12 md:h-16 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

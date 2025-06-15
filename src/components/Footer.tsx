@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
@@ -9,15 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl font-poppins">O</span>
-              </div>
-              <div>
-                <h3 className="font-poppins font-bold text-lg">Ofatce Global</h3>
-                <p className="text-sm text-gray-300">Engineering Services</p>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/83ac60f5-dae5-4126-90cc-4e8bc6dc14e9.png" 
+              alt="Ofatce Global Limited" 
+              className="h-12 w-auto object-contain"
+            />
             <p className="text-gray-300 text-sm leading-relaxed">
               Modern solutions for Audiovisual, Networking & Oil-and-Gas industries. 
               Delivering end-to-end engineering services since 2011.
