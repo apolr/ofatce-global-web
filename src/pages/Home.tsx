@@ -1,46 +1,43 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Monitor, Network, Factory, Shield, Clock, Award } from "lucide-react";
-
 const Home = () => {
-  const highlights = [
-    {
-      icon: Monitor,
-      title: "Audiovisual Integration",
-      description: "Design, install and support of modern AV & unified-communications systems for boardrooms, NOCs and training suites with cutting-edge technology solutions."
-    },
-    {
-      icon: Network,
-      title: "Networking & ICT",
-      description: "Enterprise switching, structured cabling, Wi-Fi and cybersecurity that keep operations always-on with robust infrastructure and 24/7 monitoring."
-    },
-    {
-      icon: Factory,
-      title: "Fabrication & EPC",
-      description: "Mudmat frames, skids, manifolds plus turnkey engineering, procurement & construction for upstream assets with proven safety standards."
-    }
-  ];
-
-  const clientLogos = [
-    { name: "TOTAL", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" },
-    { name: "Chevron", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" },
-    { name: "NLNG", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" },
-    { name: "Shell", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" },
-    { name: "Agip", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" }
-  ];
-
-  return (
-    <div>
+  const highlights = [{
+    icon: Monitor,
+    title: "Audiovisual Integration",
+    description: "Design, install and support of modern AV & unified-communications systems for boardrooms, NOCs and training suites with cutting-edge technology solutions."
+  }, {
+    icon: Network,
+    title: "Networking & ICT",
+    description: "Enterprise switching, structured cabling, Wi-Fi and cybersecurity that keep operations always-on with robust infrastructure and 24/7 monitoring."
+  }, {
+    icon: Factory,
+    title: "Fabrication & EPC",
+    description: "Mudmat frames, skids, manifolds plus turnkey engineering, procurement & construction for upstream assets with proven safety standards."
+  }];
+  const clientLogos = [{
+    name: "TOTAL",
+    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+  }, {
+    name: "Chevron",
+    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+  }, {
+    name: "NLNG",
+    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+  }, {
+    name: "Shell",
+    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+  }, {
+    name: "Agip",
+    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+  }];
+  return <div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')`
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')`
+      }} />
         <div className="absolute inset-0 hero-overlay" />
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-on-scroll">
@@ -57,7 +54,7 @@ const Home = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-roboto font-medium px-8 py-3 text-lg">
+              <Button size="lg" variant="outline" className="border-white hover:bg-white font-roboto font-medium px-8 py-3 text-lg text-blue-950">
                 Request a Quote
               </Button>
             </Link>
@@ -78,8 +75,7 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {highlights.map((highlight, index) => (
-              <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0">
+            {highlights.map((highlight, index) => <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <highlight.icon className="h-8 w-8 text-accent" />
@@ -91,8 +87,7 @@ const Home = () => {
                     {highlight.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -130,15 +125,9 @@ const Home = () => {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            {clientLogos.map((client, index) => (
-              <div key={index} className="animate-on-scroll">
-                <img 
-                  src={client.logo} 
-                  alt={client.name} 
-                  className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-            ))}
+            {clientLogos.map((client, index) => <div key={index} className="animate-on-scroll">
+                <img src={client.logo} alt={client.name} className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+              </div>)}
           </div>
         </div>
       </section>
@@ -159,8 +148,6 @@ const Home = () => {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
