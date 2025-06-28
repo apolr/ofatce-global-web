@@ -1,57 +1,54 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Monitor, Factory, ArrowRight, Network, Wrench, Shield, Video } from "lucide-react";
-
 const OurBusinesses = () => {
-  const businessLines = [
-    {
-      id: "oil-gas",
-      title: "Oil & Gas Solutions",
-      description: "Building on our robust technical capabilities, OFATCE GLOBAL LTD now delivers specialized solutions tailored to the oil & gas industry. Our approach combines technological innovation with deep industry insight, driving operational efficiency and safety in complex energy environments.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=500&fit=crop",
-      icon: Factory,
-      link: "/oil-gas",
-      services: [
-        { name: "Exploration & Production Support", icon: Factory },
-        { name: "Infrastructure & Project Management", icon: Wrench },
-        { name: "Maintenance & Operational Safety", icon: Shield },
-        { name: "Technology Integration & Innovation", icon: Network }
-      ],
-      highlights: [
-        "Advanced monitoring tools and automation",
-        "End-to-end project management",
-        "Operational audits and safety protocols",
-        "IoT-enabled systems and digital control rooms"
-      ]
-    },
-    {
-      id: "audiovisual-networking",
-      title: "Audiovisual & Networking Solutions",
-      description: "OFATCE GLOBAL LTD is a trusted partner in delivering comprehensive audiovisual, cabling, and computer networking solutions. We design, procure, install, and maintain robust technology infrastructures that enhance communication, collaboration, and productivity.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=500&fit=crop",
-      icon: Monitor,
-      link: "/audiovisual-networking",
-      services: [
-        { name: "Audio-Visual Systems", icon: Monitor },
-        { name: "Computer Networking & Cabling", icon: Network },
-        { name: "Video Conferencing", icon: Video },
-        { name: "Security Operations Center", icon: Shield }
-      ],
-      highlights: [
-        "World-class audiovisual systems for all venues",
-        "Enterprise networking and structured cabling",
-        "Seamless video conferencing with industry leaders",
-        "Comprehensive security monitoring and management"
-      ]
-    }
-  ];
-
-  return (
-    <div className="pt-20">
+  const businessLines = [{
+    id: "oil-gas",
+    title: "Oil & Gas Solutions",
+    description: "Building on our robust technical capabilities, OFATCE GLOBAL LTD now delivers specialized solutions tailored to the oil & gas industry. Our approach combines technological innovation with deep industry insight, driving operational efficiency and safety in complex energy environments.",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=500&fit=crop",
+    icon: Factory,
+    link: "/oil-gas",
+    services: [{
+      name: "Exploration & Production Support",
+      icon: Factory
+    }, {
+      name: "Infrastructure & Project Management",
+      icon: Wrench
+    }, {
+      name: "Maintenance & Operational Safety",
+      icon: Shield
+    }, {
+      name: "Technology Integration & Innovation",
+      icon: Network
+    }],
+    highlights: ["Advanced monitoring tools and automation", "End-to-end project management", "Operational audits and safety protocols", "IoT-enabled systems and digital control rooms"]
+  }, {
+    id: "audiovisual-networking",
+    title: "Audiovisual & Networking Solutions",
+    description: "OFATCE GLOBAL LTD is a trusted partner in delivering comprehensive audiovisual, cabling, and computer networking solutions. We design, procure, install, and maintain robust technology infrastructures that enhance communication, collaboration, and productivity.",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=500&fit=crop",
+    icon: Monitor,
+    link: "/audiovisual-networking",
+    services: [{
+      name: "Audio-Visual Systems",
+      icon: Monitor
+    }, {
+      name: "Computer Networking & Cabling",
+      icon: Network
+    }, {
+      name: "Video Conferencing",
+      icon: Video
+    }, {
+      name: "Security Operations Center",
+      icon: Shield
+    }],
+    highlights: ["World-class audiovisual systems for all venues", "Enterprise networking and structured cabling", "Seamless video conferencing with industry leaders", "Comprehensive security monitoring and management"]
+  }];
+  return <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/90 text-white">
+      <section className="bg-gradient-to-r from-primary to-primary/90 text-white py-0">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-on-scroll">
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
@@ -77,16 +74,11 @@ const OurBusinesses = () => {
           </div>
 
           <div className="space-y-16">
-            {businessLines.map((business, index) => (
-              <div key={business.id} className="animate-on-scroll">
+            {businessLines.map((business, index) => <div key={business.id} className="animate-on-scroll">
                 <Card className="overflow-hidden shadow-lg border-0">
                   <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                     <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                      <img 
-                        src={business.image} 
-                        alt={business.title}
-                        className="w-full h-full object-cover min-h-[400px]"
-                      />
+                      <img src={business.image} alt={business.title} className="w-full h-full object-cover min-h-[400px]" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       <div className="absolute bottom-6 left-6">
                         <business.icon className="h-12 w-12 text-white mb-2" />
@@ -104,24 +96,20 @@ const OurBusinesses = () => {
                       <div className="mb-6">
                         <h4 className="font-roboto font-semibold text-primary mb-4">Core Services:</h4>
                         <div className="grid grid-cols-1 gap-3">
-                          {business.services.map((service, idx) => (
-                            <div key={idx} className="flex items-center">
+                          {business.services.map((service, idx) => <div key={idx} className="flex items-center">
                               <service.icon className="h-5 w-5 text-accent mr-3" />
                               <span className="text-sm text-gray-700">{service.name}</span>
-                            </div>
-                          ))}
+                            </div>)}
                         </div>
                       </div>
                       
                       <div className="mb-6">
                         <h4 className="font-roboto font-semibold text-primary mb-3">Key Highlights:</h4>
                         <ul className="space-y-2">
-                          {business.highlights.map((highlight, idx) => (
-                            <li key={idx} className="flex items-start">
+                          {business.highlights.map((highlight, idx) => <li key={idx} className="flex items-start">
                               <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></div>
                               <span className="text-sm text-gray-700">{highlight}</span>
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </div>
                       
@@ -134,8 +122,7 @@ const OurBusinesses = () => {
                     </CardContent>
                   </div>
                 </Card>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -163,8 +150,6 @@ const OurBusinesses = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default OurBusinesses;
