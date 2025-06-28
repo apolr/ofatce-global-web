@@ -1,11 +1,8 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <div className="pt-20">
+  return <div className="pt-20 py-0">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90 text-white">
         <div className="container mx-auto px-4">
@@ -141,16 +138,9 @@ const Contact = () => {
               <div className="animate-on-scroll">
                 <Card className="bg-white shadow-lg border-0 overflow-hidden">
                   <div className="h-80 bg-gray-200 relative">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.4!2d7.0!3d4.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDgnMDAuMCJOIDfCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen={true}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="OFATCE Global Limited Office Location"
-                    ></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.4!2d7.0!3d4.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDgnMDAuMCJOIDfCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890" width="100%" height="100%" style={{
+                    border: 0
+                  }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="OFATCE Global Limited Office Location"></iframe>
                   </div>
                   <CardContent className="p-4">
                     <p className="text-sm text-gray-700 text-center">
@@ -240,8 +230,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
