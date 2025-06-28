@@ -4,10 +4,10 @@ import { Shield, Target, Eye, Heart, Users, Lightbulb } from "lucide-react";
 
 const AboutUs = () => {
   const coreValues = [
-    { icon: Lightbulb, title: "Innovation", description: "Embracing cutting-edge technologies and creative solutions" },
-    { icon: Shield, title: "Integrity", description: "Upholding the highest ethical standards in all our operations" },
-    { icon: Users, title: "Customer-Centricity", description: "Placing our clients' needs at the center of everything we do" },
-    { icon: Target, title: "Excellence", description: "Delivering superior quality in all our services and solutions" }
+    { icon: Lightbulb, title: "Innovation", description: "Embracing cutting-edge technologies to drive efficient solutions" },
+    { icon: Shield, title: "Integrity", description: "Upholding transparency and trust in every engagement" },
+    { icon: Users, title: "Customer-Centricity", description: "Tailoring services to meet each client's unique needs" },
+    { icon: Target, title: "Excellence", description: "Consistently surpassing expectations in quality and execution" }
   ];
 
   const leadership = [

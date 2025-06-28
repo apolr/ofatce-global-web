@@ -7,20 +7,20 @@ import { Monitor, Network, Factory, Wrench, ArrowRight, Users, Award, TrendingUp
 const Home = () => {
   const businessLines = [
     {
-      title: "Audiovisual & Networking",
-      description: "Complete AV systems, enterprise networking, and structured cabling solutions",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-      icon: Monitor,
-      link: "/audiovisual-networking",
-      highlights: ["Video Conferencing", "Network Infrastructure", "Automation Systems"]
-    },
-    {
       title: "Oil & Gas Solutions",
       description: "Comprehensive services for exploration, production, and infrastructure management",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop",
       icon: Factory,
       link: "/oil-gas",
       highlights: ["Exploration Services", "Production Support", "Infrastructure Management"]
+    },
+    {
+      title: "Audiovisual & Networking",
+      description: "Complete AV systems, enterprise networking, and structured cabling solutions",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
+      icon: Monitor,
+      link: "/audiovisual-networking",
+      highlights: ["Video Conferencing", "Network Infrastructure", "Automation Systems"]
     }
   ];
 
@@ -79,7 +79,7 @@ const Home = () => {
             Two Specialized Business Lines Under One Trusted Brand
           </h1>
           <p className="text-responsive-xl mb-8 text-gray-200 max-w-4xl mx-auto">
-            OFATCE Global Limited delivers excellence across Audiovisual & Networking Solutions and Oil & Gas Services—serving Nigeria's most demanding organizations since 2006.
+            OFATCE Global Limited delivers excellence across Oil & Gas Solutions and Audiovisual & Networking Services—serving Nigeria's most demanding organizations since 2006.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/our-businesses">
@@ -104,7 +104,7 @@ const Home = () => {
               Our Two Core Business Lines
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized expertise in technology solutions and energy sector services, delivering exceptional results across diverse industries
+              Specialized expertise in energy sector services and technology solutions, delivering exceptional results across diverse industries
             </p>
           </div>
           
@@ -166,7 +166,7 @@ const Home = () => {
               One Company, Two Specializations
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Founded in 2006, OFATCE Global Limited has evolved into a dual-focused organization, combining our expertise in cutting-edge technology solutions with comprehensive oil & gas services. Our commitment to excellence, innovation, and reliable delivery remains constant across both business lines.
+              Founded in 2006, OFATCE Global Limited has evolved into a dual-focused organization, combining our expertise in comprehensive oil & gas services with cutting-edge technology solutions. Our commitment to excellence, innovation, and reliable delivery remains constant across both business lines.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {quickStats.map((stat, index) => (
