@@ -46,9 +46,9 @@ const OurBusinesses = () => {
     }],
     highlights: ["World-class audiovisual systems for all venues", "Enterprise networking and structured cabling", "Seamless video conferencing with industry leaders", "Comprehensive security monitoring and management"]
   }];
-  return <div className="pt-20">
+  return <div className="pt-20 py-0">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/90 text-white py-0">
+      <section className="bg-gradient-to-r from-primary to-primary/90 text-white py-[80px]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-on-scroll">
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
