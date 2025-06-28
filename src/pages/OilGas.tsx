@@ -1,66 +1,59 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Factory, Wrench, Shield, Zap, Users, TrendingUp, Award, Settings } from "lucide-react";
-
 const OilGas = () => {
-  const services = [
-    {
-      icon: Factory,
-      title: "Exploration & Production Support",
-      description: "Leveraging advanced monitoring tools, automation, and data analytics, we enhance exploration and production workflows—helping operators achieve optimized output with greater reliability.",
-      features: ["Advanced Monitoring Tools", "Workflow Automation", "Data Analytics", "Production Optimization"]
-    },
-    {
-      icon: Settings,
-      title: "Infrastructure & Project Management",
-      description: "We design and oversee the implementation of critical oil & gas infrastructure, offering end-to-end project management that ensures on-time, within-budget delivery of facilities and systems.",
-      features: ["Infrastructure Design", "Project Management", "Facility Implementation", "On-time Delivery"]
-    },
-    {
-      icon: Wrench,
-      title: "Maintenance & Operational Safety",
-      description: "Our services extend to routine maintenance, operational audits, and safety protocol reinforcement—minimizing downtime and safeguarding assets.",
-      features: ["Routine Maintenance", "Operational Audits", "Safety Protocols", "Asset Protection"]
-    },
-    {
-      icon: Zap,
-      title: "Technology Integration & Innovation",
-      description: "From IoT-enabled systems to remote digital control rooms, we embed innovative technologies into oil & gas operations, equipping clients with real-time insights and advanced process controls.",
-      features: ["IoT-Enabled Systems", "Digital Control Rooms", "Real-time Insights", "Process Controls"]
-    }
-  ];
-
-  const sectors = [
-    {
-      title: "Upstream Operations",
-      description: "Exploration and production support services",
-      icon: Factory,
-      services: ["Exploration Support", "Production Enhancement", "Well Optimization", "Reservoir Management"]
-    },
-    {
-      title: "Midstream Operations", 
-      description: "Transportation and infrastructure solutions",
-      icon: Settings,
-      services: ["Pipeline Management", "Infrastructure Development", "Transportation Solutions", "Facility Operations"]
-    },
-    {
-      title: "Downstream Operations",
-      description: "Processing and operational support",
-      icon: Wrench,
-      services: ["Process Optimization", "Operational Support", "Maintenance Services", "Safety Management"]
-    }
-  ];
-
-  const stats = [
-    { number: "50+", label: "Oil & Gas Projects", icon: Factory },
-    { number: "15+", label: "Industry Partners", icon: Users },
-    { number: "100%", label: "Safety Compliance", icon: Shield }
-  ];
-
-  return (
-    <div className="pt-20">
+  const services = [{
+    icon: Factory,
+    title: "Exploration & Production Support",
+    description: "Leveraging advanced monitoring tools, automation, and data analytics, we enhance exploration and production workflows—helping operators achieve optimized output with greater reliability.",
+    features: ["Advanced Monitoring Tools", "Workflow Automation", "Data Analytics", "Production Optimization"]
+  }, {
+    icon: Settings,
+    title: "Infrastructure & Project Management",
+    description: "We design and oversee the implementation of critical oil & gas infrastructure, offering end-to-end project management that ensures on-time, within-budget delivery of facilities and systems.",
+    features: ["Infrastructure Design", "Project Management", "Facility Implementation", "On-time Delivery"]
+  }, {
+    icon: Wrench,
+    title: "Maintenance & Operational Safety",
+    description: "Our services extend to routine maintenance, operational audits, and safety protocol reinforcement—minimizing downtime and safeguarding assets.",
+    features: ["Routine Maintenance", "Operational Audits", "Safety Protocols", "Asset Protection"]
+  }, {
+    icon: Zap,
+    title: "Technology Integration & Innovation",
+    description: "From IoT-enabled systems to remote digital control rooms, we embed innovative technologies into oil & gas operations, equipping clients with real-time insights and advanced process controls.",
+    features: ["IoT-Enabled Systems", "Digital Control Rooms", "Real-time Insights", "Process Controls"]
+  }];
+  const sectors = [{
+    title: "Upstream Operations",
+    description: "Exploration and production support services",
+    icon: Factory,
+    services: ["Exploration Support", "Production Enhancement", "Well Optimization", "Reservoir Management"]
+  }, {
+    title: "Midstream Operations",
+    description: "Transportation and infrastructure solutions",
+    icon: Settings,
+    services: ["Pipeline Management", "Infrastructure Development", "Transportation Solutions", "Facility Operations"]
+  }, {
+    title: "Downstream Operations",
+    description: "Processing and operational support",
+    icon: Wrench,
+    services: ["Process Optimization", "Operational Support", "Maintenance Services", "Safety Management"]
+  }];
+  const stats = [{
+    number: "50+",
+    label: "Oil & Gas Projects",
+    icon: Factory
+  }, {
+    number: "15+",
+    label: "Industry Partners",
+    icon: Users
+  }, {
+    number: "100%",
+    label: "Safety Compliance",
+    icon: Shield
+  }];
+  return <div className="pt-20 py-0">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90 text-white">
         <div className="container mx-auto px-4">
@@ -93,8 +86,7 @@ const OilGas = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0">
+            {services.map((service, index) => <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
                     <service.icon className="h-8 w-8 text-accent" />
@@ -106,16 +98,13 @@ const OilGas = () => {
                     {service.description}
                   </p>
                   <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start">
+                    {service.features.map((feature, idx) => <div key={idx} className="flex items-start">
                         <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-gray-700">{feature}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -133,8 +122,7 @@ const OilGas = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {sectors.map((sector, index) => (
-              <Card key={index} className="animate-on-scroll bg-white shadow-lg border-0">
+            {sectors.map((sector, index) => <Card key={index} className="animate-on-scroll bg-white shadow-lg border-0">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                     <sector.icon className="h-8 w-8 text-accent" />
@@ -146,16 +134,13 @@ const OilGas = () => {
                     {sector.description}
                   </p>
                   <ul className="space-y-2">
-                    {sector.services.map((service, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
+                    {sector.services.map((service, idx) => <li key={idx} className="flex items-start text-sm">
                         <div className="w-2 h-2 bg-accent rounded-full mr-2 mt-2 flex-shrink-0"></div>
                         <span className="text-gray-700">{service}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -173,8 +158,7 @@ const OilGas = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((stat, index) => (
-              <Card key={index} className="animate-on-scroll bg-white shadow-lg border-0">
+            {stats.map((stat, index) => <Card key={index} className="animate-on-scroll bg-white shadow-lg border-0">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="h-8 w-8 text-accent" />
@@ -186,8 +170,7 @@ const OilGas = () => {
                     {stat.label}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -203,13 +186,23 @@ const OilGas = () => {
               We understand the critical nature of oil and gas operations and are committed to delivering services that meet the highest standards of safety, reliability, and efficiency. Our team combines deep industry knowledge with innovative approaches to help our clients achieve their operational goals.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {[
-                { icon: Shield, title: "Safety First", description: "Uncompromising commitment to safety protocols" },
-                { icon: Award, title: "Quality Assured", description: "Rigorous quality control processes" },
-                { icon: Users, title: "Expert Team", description: "Experienced professionals and specialists" },
-                { icon: TrendingUp, title: "Continuous Innovation", description: "Adopting latest technologies and methods" }
-              ].map((value, index) => (
-                <div key={index} className="text-center">
+              {[{
+              icon: Shield,
+              title: "Safety First",
+              description: "Uncompromising commitment to safety protocols"
+            }, {
+              icon: Award,
+              title: "Quality Assured",
+              description: "Rigorous quality control processes"
+            }, {
+              icon: Users,
+              title: "Expert Team",
+              description: "Experienced professionals and specialists"
+            }, {
+              icon: TrendingUp,
+              title: "Continuous Innovation",
+              description: "Adopting latest technologies and methods"
+            }].map((value, index) => <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="h-8 w-8 text-accent" />
                   </div>
@@ -219,8 +212,7 @@ const OilGas = () => {
                   <p className="text-sm text-gray-700">
                     {value.description}
                   </p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -249,8 +241,6 @@ const OilGas = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default OilGas;
