@@ -51,14 +51,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link to="/contact">
-              <Button className="bg-accent hover:bg-accent/90 text-white font-roboto font-medium">
-                Book Discovery Call
-              </Button>
-            </Link>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
