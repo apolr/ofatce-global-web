@@ -32,11 +32,11 @@ const AboutUs = () => {
   ];
 
   const timeline = [
-    { year: "2006", event: "Company Founded", description: "Started as a local cabling outfit in Port Harcourt" },
+    { year: "2006", event: "Company Founded", description: "OFATCE GLOBAL LTD established as a technology solutions provider" },
     { year: "2010", event: "First Major Contract", description: "Expanded services to banking and finance sector" },
-    { year: "2015", event: "West Africa Expansion", description: "Extended operations across West African markets" },
+    { year: "2015", event: "Oil & Gas Integration", description: "Added specialized oil & gas services to our portfolio" },
     { year: "2020", event: "ISO Certification", description: "Achieved international quality management standards" },
-    { year: "2025", event: "Industry Leadership", description: "Recognized as leading AV and networking provider" }
+    { year: "2025", event: "Industry Leadership", description: "Leading provider of AV, networking, and oil & gas solutions" }
   ];
 
   return (
@@ -48,8 +48,8 @@ const AboutUs = () => {
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
               About OFATCE Global Limited
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              From local cabling outfit to West Africa's premier AV and networking solutions provider
+            <p className="text-xl text-white leading-relaxed">
+              Established in 2006 as a leading provider of technology-driven solutions in Nigeria
             </p>
           </div>
         </div>
@@ -70,11 +70,11 @@ const AboutUs = () => {
               <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-6">
                 Who We Are
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                OFATCE GLOBAL LTD began as a local cabling outfit in Port Harcourt and now serves banks, oil-and-gas majors, ministries and smart-home owners across West Africa.
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                OFATCE GLOBAL LTD, founded in 2006, has established itself as a leading provider of technology-driven solutions in Nigeria. Originally focused on audiovisual, cabling infrastructure, and computer networking, we have grown to integrate specialized oil & gas services, reflecting our commitment to evolve and meet the diverse needs of our clients.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                With nearly two decades of experience, we've evolved from humble beginnings to become a trusted partner for Nigeria's most demanding organizations, delivering world-class technology solutions that drive business success.
+              <p className="text-lg text-gray-700 leading-relaxed">
+                With nearly two decades of experience, we've evolved from a technology-focused company to become a trusted partner for Nigeria's most demanding organizations, delivering world-class solutions that drive business success across multiple industries.
               </p>
             </div>
           </div>
@@ -91,8 +91,8 @@ const AboutUs = () => {
                   <Eye className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-poppins font-bold text-primary mb-4">Our Vision</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  To be the leading provider of cutting-edge audiovisual and networking solutions in Nigeria and beyond.
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  To become the most sought-after provider of advanced audiovisual, networking, and oil & gas solutions in Nigeria and beyond.
                 </p>
               </CardContent>
             </Card>
@@ -103,8 +103,8 @@ const AboutUs = () => {
                   <Target className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-poppins font-bold text-primary mb-4">Our Mission</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  To deliver exceptional technology services that ensure seamless communication, reliable connectivity and superior audiovisual experiences.
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  To deliver exceptional technology services that enable seamless communication, secure connectivity, and superior operational performance, maintaining the highest levels of professionalism, quality, and reliability.
                 </p>
               </CardContent>
             </Card>
@@ -119,7 +119,7 @@ const AboutUs = () => {
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
               Our Core Values
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Innovation · Integrity · Customer-Centricity · Excellence
             </p>
           </div>
@@ -134,7 +134,7 @@ const AboutUs = () => {
                   <h4 className="text-lg font-poppins font-semibold text-primary mb-3">
                     {value.title}
                   </h4>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-700 text-sm">
                     {value.description}
                   </p>
                 </CardContent>
@@ -151,7 +151,7 @@ const AboutUs = () => {
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
               Leadership Team
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-700">
               Meet the experts driving our vision forward
             </p>
           </div>
@@ -171,7 +171,7 @@ const AboutUs = () => {
                   <p className="text-accent font-medium mb-3">
                     {leader.role}
                   </p>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-700 text-sm">
                     Super-power: {leader.superpower}
                   </p>
                 </CardContent>
@@ -188,7 +188,7 @@ const AboutUs = () => {
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
               Our Journey
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-700">
               Key milestones in our growth and development
             </p>
           </div>
@@ -205,7 +205,7 @@ const AboutUs = () => {
                     <h4 className="text-xl font-poppins font-semibold text-primary mb-2">
                       {item.event}
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-gray-700">
                       {item.description}
                     </p>
                   </div>

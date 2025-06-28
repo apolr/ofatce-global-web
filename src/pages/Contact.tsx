@@ -11,10 +11,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-on-scroll">
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
-              Contact Us
+              Let's Partner to Achieve Your Goals
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Get in touch with our team to discuss your audiovisual & networking or oil & gas project requirements
+            <p className="text-xl text-white leading-relaxed">
+              We're eager to help bring your audiovisual, networking, or oil & gas projects to life. Contact us to discuss your specific needs and explore tailored solutions.
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Contact = () => {
                 <h2 className="text-2xl font-poppins font-bold text-primary mb-6">
                   Get in Touch
                 </h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">
+                <p className="text-gray-700 mb-8 leading-relaxed">
                   Ready to discuss your next project? Our team is here to help you with both audiovisual & networking solutions and oil & gas services. Contact us through any of the methods below.
                 </p>
               </div>
@@ -45,7 +45,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-roboto font-semibold text-gray-800 mb-2">Office Address</h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-700 leading-relaxed">
                           6 Wals Street, By Odili Road,<br />
                           Port Harcourt, Rivers State, Nigeria
                         </p>
@@ -62,7 +62,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-roboto font-semibold text-gray-800 mb-2">Phone Numbers</h3>
-                        <div className="text-gray-600 space-y-1">
+                        <div className="text-gray-700 space-y-1">
                           <p>
                             <a href="tel:+2348028636198" className="hover:text-accent transition-colors">
                               +234 802 863 6198
@@ -87,7 +87,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-roboto font-semibold text-gray-800 mb-2">Email Addresses</h3>
-                        <div className="text-gray-600 space-y-1">
+                        <div className="text-gray-700 space-y-1">
                           <p>
                             <a href="mailto:info@ofatceglobal.com" className="hover:text-accent transition-colors">
                               info@ofatceglobal.com
@@ -111,16 +111,6 @@ const Contact = () => {
                   Business Line Inquiries
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Card className="bg-blue-50 border-blue-200">
-                    <CardContent className="p-4">
-                      <h4 className="font-roboto font-semibold text-blue-800 mb-2">
-                        Audiovisual & Networking
-                      </h4>
-                      <p className="text-sm text-blue-700">
-                        For AV systems, networking, and technology solutions
-                      </p>
-                    </CardContent>
-                  </Card>
                   <Card className="bg-orange-50 border-orange-200">
                     <CardContent className="p-4">
                       <h4 className="font-roboto font-semibold text-orange-800 mb-2">
@@ -128,6 +118,16 @@ const Contact = () => {
                       </h4>
                       <p className="text-sm text-orange-700">
                         For oil & gas services and infrastructure projects
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-blue-50 border-blue-200">
+                    <CardContent className="p-4">
+                      <h4 className="font-roboto font-semibold text-blue-800 mb-2">
+                        Audiovisual & Networking
+                      </h4>
+                      <p className="text-sm text-blue-700">
+                        For AV systems, networking, and technology solutions
                       </p>
                     </CardContent>
                   </Card>
@@ -153,7 +153,7 @@ const Contact = () => {
                     ></iframe>
                   </div>
                   <CardContent className="p-4">
-                    <p className="text-sm text-gray-600 text-center">
+                    <p className="text-sm text-gray-700 text-center">
                       Click on the map to get directions to our office
                     </p>
                   </CardContent>
@@ -202,20 +202,20 @@ const Contact = () => {
             <h2 className="text-2xl font-poppins font-bold text-primary mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Whether you need audiovisual & networking solutions or oil & gas services, our experienced team is ready to help you achieve your goals. Contact us today to discuss your project requirements.
+            <p className="text-lg text-gray-700 mb-8">
+              Whether you need oil & gas solutions or audiovisual & networking services, our experienced team is ready to help you achieve your goals. Contact us today to discuss your project requirements.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="bg-white shadow-lg border-0">
                 <CardContent className="p-6 text-center">
                   <h3 className="font-poppins font-semibold text-primary mb-3">
-                    Audiovisual & Networking Projects
+                    Oil & Gas Projects
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Technology solutions, AV systems, enterprise networking, and automation
+                  <p className="text-gray-700 text-sm mb-4">
+                    Exploration, production, infrastructure, and specialized industry services
                   </p>
-                  <a href="/audiovisual-networking">
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white font-roboto">
+                  <a href="/oil-gas">
+                    <Button className="bg-orange-600 hover:bg-orange-700 text-white font-roboto">
                       Learn More
                     </Button>
                   </a>
@@ -224,13 +224,13 @@ const Contact = () => {
               <Card className="bg-white shadow-lg border-0">
                 <CardContent className="p-6 text-center">
                   <h3 className="font-poppins font-semibold text-primary mb-3">
-                    Oil & Gas Projects
+                    Audiovisual & Networking Projects
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Exploration, production, infrastructure, and specialized industry services
+                  <p className="text-gray-700 text-sm mb-4">
+                    Technology solutions, AV systems, enterprise networking, and automation
                   </p>
-                  <a href="/oil-gas">
-                    <Button className="bg-orange-600 hover:bg-orange-700 text-white font-roboto">
+                  <a href="/audiovisual-networking">
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white font-roboto">
                       Learn More
                     </Button>
                   </a>

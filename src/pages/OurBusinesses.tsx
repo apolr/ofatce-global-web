@@ -7,43 +7,43 @@ import { Monitor, Factory, ArrowRight, Network, Wrench, Shield, Video } from "lu
 const OurBusinesses = () => {
   const businessLines = [
     {
-      id: "audiovisual-networking",
-      title: "Audiovisual & Networking Solutions",
-      description: "Comprehensive technology solutions including audiovisual systems, enterprise networking, structured cabling, video conferencing, and building automation.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=500&fit=crop",
-      icon: Monitor,
-      link: "/audiovisual-networking",
-      services: [
-        { name: "Audiovisual Systems", icon: Monitor },
-        { name: "Networking & Cabling", icon: Network },
-        { name: "Video Conferencing", icon: Video },
-        { name: "Automation & Security", icon: Shield }
-      ],
-      highlights: [
-        "Enterprise-grade networking infrastructure",
-        "Professional audiovisual installations",
-        "Seamless video conferencing solutions",
-        "Smart building automation systems"
-      ]
-    },
-    {
       id: "oil-gas",
       title: "Oil & Gas Solutions",
-      description: "Specialized services for the oil and gas industry, covering exploration, production, infrastructure development, and maintenance operations.",
+      description: "Building on our robust technical capabilities, OFATCE GLOBAL LTD now delivers specialized solutions tailored to the oil & gas industry. Our approach combines technological innovation with deep industry insight, driving operational efficiency and safety in complex energy environments.",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=500&fit=crop",
       icon: Factory,
       link: "/oil-gas",
       services: [
-        { name: "Exploration Services", icon: Factory },
-        { name: "Production Support", icon: Wrench },
-        { name: "Infrastructure Management", icon: Network },
-        { name: "Safety & Maintenance", icon: Shield }
+        { name: "Exploration & Production Support", icon: Factory },
+        { name: "Infrastructure & Project Management", icon: Wrench },
+        { name: "Maintenance & Operational Safety", icon: Shield },
+        { name: "Technology Integration & Innovation", icon: Network }
       ],
       highlights: [
-        "Comprehensive exploration and production services",
-        "Advanced infrastructure project management",
-        "Safety-focused maintenance operations",
-        "Technology-driven innovation solutions"
+        "Advanced monitoring tools and automation",
+        "End-to-end project management",
+        "Operational audits and safety protocols",
+        "IoT-enabled systems and digital control rooms"
+      ]
+    },
+    {
+      id: "audiovisual-networking",
+      title: "Audiovisual & Networking Solutions",
+      description: "OFATCE GLOBAL LTD is a trusted partner in delivering comprehensive audiovisual, cabling, and computer networking solutions. We design, procure, install, and maintain robust technology infrastructures that enhance communication, collaboration, and productivity.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=500&fit=crop",
+      icon: Monitor,
+      link: "/audiovisual-networking",
+      services: [
+        { name: "Audio-Visual Systems", icon: Monitor },
+        { name: "Computer Networking & Cabling", icon: Network },
+        { name: "Video Conferencing", icon: Video },
+        { name: "Security Operations Center", icon: Shield }
+      ],
+      highlights: [
+        "World-class audiovisual systems for all venues",
+        "Enterprise networking and structured cabling",
+        "Seamless video conferencing with industry leaders",
+        "Comprehensive security monitoring and management"
       ]
     }
   ];
@@ -57,8 +57,8 @@ const OurBusinesses = () => {
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
               Our Business Lines
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Two specialized divisions delivering excellence across technology solutions and energy sector services
+            <p className="text-xl text-white leading-relaxed">
+              Two specialized divisions delivering excellence across energy sector services and technology solutions
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ const OurBusinesses = () => {
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-6">
               Specialized Expertise, Unified Excellence
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               OFATCE Global Limited operates through two distinct business lines, each with deep industry expertise and a proven track record of delivering exceptional results. Our dual-focus approach allows us to serve diverse client needs while maintaining the highest standards of quality and innovation.
             </p>
           </div>
@@ -97,17 +97,17 @@ const OurBusinesses = () => {
                       <h3 className="text-3xl font-poppins font-bold text-primary mb-4">
                         {business.title}
                       </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
+                      <p className="text-gray-700 mb-6 leading-relaxed">
                         {business.description}
                       </p>
                       
                       <div className="mb-6">
                         <h4 className="font-roboto font-semibold text-primary mb-4">Core Services:</h4>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 gap-3">
                           {business.services.map((service, idx) => (
                             <div key={idx} className="flex items-center">
                               <service.icon className="h-5 w-5 text-accent mr-3" />
-                              <span className="text-sm text-gray-600">{service.name}</span>
+                              <span className="text-sm text-gray-700">{service.name}</span>
                             </div>
                           ))}
                         </div>
@@ -119,7 +119,7 @@ const OurBusinesses = () => {
                           {business.highlights.map((highlight, idx) => (
                             <li key={idx} className="flex items-start">
                               <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                              <span className="text-sm text-gray-600">{highlight}</span>
+                              <span className="text-sm text-gray-700">{highlight}</span>
                             </li>
                           ))}
                         </ul>
@@ -146,7 +146,7 @@ const OurBusinesses = () => {
           <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-6">
             Ready to Explore Our Solutions?
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             Discover how our specialized business lines can address your unique challenges and deliver exceptional results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

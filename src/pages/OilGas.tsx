@@ -8,27 +8,27 @@ const OilGas = () => {
   const services = [
     {
       icon: Factory,
-      title: "Exploration & Production Services",
-      description: "Comprehensive support for oil and gas exploration and production operations with advanced technology and expertise.",
-      features: ["Seismic Data Analysis", "Drilling Support", "Production Optimization", "Reservoir Management"]
+      title: "Exploration & Production Support",
+      description: "Leveraging advanced monitoring tools, automation, and data analytics, we enhance exploration and production workflows—helping operators achieve optimized output with greater reliability.",
+      features: ["Advanced Monitoring Tools", "Workflow Automation", "Data Analytics", "Production Optimization"]
     },
     {
       icon: Settings,
       title: "Infrastructure & Project Management",
-      description: "End-to-end infrastructure development and project management services for complex oil and gas operations.",
-      features: ["Pipeline Construction", "Facility Development", "Project Coordination", "Quality Assurance"]
+      description: "We design and oversee the implementation of critical oil & gas infrastructure, offering end-to-end project management that ensures on-time, within-budget delivery of facilities and systems.",
+      features: ["Infrastructure Design", "Project Management", "Facility Implementation", "On-time Delivery"]
     },
     {
       icon: Wrench,
-      title: "Maintenance & Safety",
-      description: "Preventive maintenance and safety management services ensuring operational excellence and regulatory compliance.",
-      features: ["Preventive Maintenance", "Safety Protocols", "Emergency Response", "Compliance Management"]
+      title: "Maintenance & Operational Safety",
+      description: "Our services extend to routine maintenance, operational audits, and safety protocol reinforcement—minimizing downtime and safeguarding assets.",
+      features: ["Routine Maintenance", "Operational Audits", "Safety Protocols", "Asset Protection"]
     },
     {
       icon: Zap,
-      title: "Technology & Innovation",
-      description: "Cutting-edge technology solutions and innovative approaches to optimize oil and gas operations.",
-      features: ["Digital Solutions", "Automation Systems", "Data Analytics", "Process Optimization"]
+      title: "Technology Integration & Innovation",
+      description: "From IoT-enabled systems to remote digital control rooms, we embed innovative technologies into oil & gas operations, equipping clients with real-time insights and advanced process controls.",
+      features: ["IoT-Enabled Systems", "Digital Control Rooms", "Real-time Insights", "Process Controls"]
     }
   ];
 
@@ -37,19 +37,19 @@ const OilGas = () => {
       title: "Upstream Operations",
       description: "Exploration and production support services",
       icon: Factory,
-      services: ["Drilling Services", "Well Completion", "Production Support", "Reservoir Engineering"]
+      services: ["Exploration Support", "Production Enhancement", "Well Optimization", "Reservoir Management"]
     },
     {
       title: "Midstream Operations", 
-      description: "Transportation and storage solutions",
+      description: "Transportation and infrastructure solutions",
       icon: Settings,
-      services: ["Pipeline Services", "Storage Solutions", "Transportation", "Processing Support"]
+      services: ["Pipeline Management", "Infrastructure Development", "Transportation Solutions", "Facility Operations"]
     },
     {
       title: "Downstream Operations",
-      description: "Refining and distribution support",
+      description: "Processing and operational support",
       icon: Wrench,
-      services: ["Refinery Support", "Distribution Networks", "Quality Control", "Process Optimization"]
+      services: ["Process Optimization", "Operational Support", "Maintenance Services", "Safety Management"]
     }
   ];
 
@@ -68,8 +68,8 @@ const OilGas = () => {
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
               Oil & Gas Solutions
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed mb-8">
-              Comprehensive services for the oil and gas industry, delivering excellence in exploration, production, infrastructure management, and technological innovation across the entire value chain.
+            <p className="text-xl text-white leading-relaxed mb-8">
+              Building on our robust technical capabilities, OFATCE GLOBAL LTD now delivers specialized solutions tailored to the oil & gas industry. Our approach combines technological innovation with deep industry insight, driving operational efficiency and safety in complex energy environments.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-roboto font-medium px-8 py-3 text-lg">
@@ -85,10 +85,10 @@ const OilGas = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
-              Our Core Services
+              Our Specialized Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized expertise across the entire oil and gas value chain, from exploration to production and beyond
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Comprehensive solutions across the entire oil and gas value chain, combining technological innovation with industry expertise
             </p>
           </div>
 
@@ -102,14 +102,14 @@ const OilGas = () => {
                   <h3 className="text-xl font-poppins font-semibold text-primary mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start">
                         <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-gray-600">{feature}</span>
+                        <span className="text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -127,7 +127,7 @@ const OilGas = () => {
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
               Industry Sectors We Serve
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Comprehensive coverage across upstream, midstream, and downstream operations
             </p>
           </div>
@@ -142,14 +142,14 @@ const OilGas = () => {
                   <h3 className="text-xl font-poppins font-semibold text-primary mb-3">
                     {sector.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-700 mb-4">
                     {sector.description}
                   </p>
                   <ul className="space-y-2">
                     {sector.services.map((service, idx) => (
                       <li key={idx} className="flex items-start text-sm">
                         <div className="w-2 h-2 bg-accent rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-600">{service}</span>
+                        <span className="text-gray-700">{service}</span>
                       </li>
                     ))}
                   </ul>
@@ -167,7 +167,7 @@ const OilGas = () => {
             <h2 className="text-2xl font-poppins font-bold text-primary mb-4">
               Industry Experience
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-700">
               Proven track record in oil and gas project delivery and partnership
             </p>
           </div>
@@ -182,7 +182,7 @@ const OilGas = () => {
                   <div className="text-3xl font-poppins font-bold text-accent mb-2">
                     {stat.number}
                   </div>
-                  <p className="text-gray-600">
+                  <p className="text-gray-700">
                     {stat.label}
                   </p>
                 </CardContent>
@@ -199,7 +199,7 @@ const OilGas = () => {
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-6">
               Our Commitment to Excellence
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               We understand the critical nature of oil and gas operations and are committed to delivering services that meet the highest standards of safety, reliability, and efficiency. Our team combines deep industry knowledge with innovative approaches to help our clients achieve their operational goals.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -216,7 +216,7 @@ const OilGas = () => {
                   <h4 className="font-poppins font-semibold text-primary mb-2">
                     {value.title}
                   </h4>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-700">
                     {value.description}
                   </p>
                 </div>
@@ -232,7 +232,7 @@ const OilGas = () => {
           <h2 className="text-responsive-3xl font-poppins font-bold mb-6">
             Partner with Oil & Gas Experts
           </h2>
-          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-white max-w-2xl mx-auto">
             Let's discuss how our specialized oil and gas services can support your operations and drive project success
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,89 +1,83 @@
 
+import { Factory, Monitor, Shield, Network } from "lucide-react";
+
 export const portfolioItems = [
   {
     id: 1,
-    title: "Barcadi Ltd – Lagos Campus Network Upgrade",
+    title: "Barcadi Limited Network Infrastructure",
     category: "Audiovisual & Networking",
-    tags: ["Enterprise", "Networking"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
-    problem: "Network bottlenecks across two campuses",
-    solution: "Fibre backbone + redundant core switching",
-    result: "4× throughput, zero unplanned downtime in 12 months",
-    client: "Barcadi Ltd",
-    duration: "4 months",
-    location: "Lagos, Nigeria",
-    businessLine: "AV/Networking"
+    description: "Delivered comprehensive networking infrastructure cabling for Barcadi Limited in Lagos, ensuring reliable connectivity and high-performance network operations.",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
+    icon: Network,
+    tags: ["Network Infrastructure", "Structured Cabling", "Enterprise Networking"],
+    client: "Barcadi Limited, Lagos",
+    year: "2024",
+    status: "Completed"
   },
   {
     id: 2,
-    title: "Avanti Communications Boardroom Transformation",
+    title: "Avanti Communications Video Conferencing",
     category: "Audiovisual & Networking",
-    tags: ["Audiovisual", "Video Conferencing"],
+    description: "Upgraded video conferencing facilities for Avanti Communications with advanced systems ensuring seamless remote collaboration and communication.",
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-    problem: "Poor remote participation in board meetings",
-    solution: "Complete boardroom video-conferencing overhaul",
-    result: "Remote-participation rate ↑ 60%",
+    icon: Monitor,
+    tags: ["Video Conferencing", "AV Systems", "Communication Solutions"],
     client: "Avanti Communications",
-    duration: "2 months",
-    location: "Lagos, Nigeria",
-    businessLine: "AV/Networking"
+    year: "2024",
+    status: "Completed"
   },
   {
     id: 3,
-    title: "TotalEnergies Offshore Communication Systems",
+    title: "TotalEnergies Critical Operations Support",
     category: "Oil & Gas",
-    tags: ["Oil & Gas", "Offshore"],
+    description: "Provided technology services supporting critical oil & gas operations for TotalEnergies E&P Nigeria via Southgate Technologies partnership.",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop",
-    problem: "Communication gaps in offshore project sites",
-    solution: "Integrated communication and data systems for offshore platforms",
-    result: "Seamless communication across all offshore platforms",
-    client: "TotalEnergies E&P",
-    duration: "6 months",
-    location: "Offshore Nigeria",
-    businessLine: "Oil & Gas"
+    icon: Factory,
+    tags: ["Oil & Gas", "Operations Support", "Energy Technology"],
+    client: "TotalEnergies E&P Nigeria",
+    year: "2024",
+    status: "Completed"
   },
   {
     id: 4,
-    title: "Nigerian Ministry of Defence Secure Communications",
+    title: "Ministry of Defense Secure Networks",
     category: "Audiovisual & Networking",
-    tags: ["Defence", "Security"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
-    problem: "Need for classified-level secure communications",
-    solution: "Hardened conferencing suite & backbone links",
-    result: "Meets classified-info standards with full redundancy",
-    client: "Nigerian Ministry of Defence",
-    duration: "8 months",
-    location: "Abuja, Nigeria",
-    businessLine: "AV/Networking"
+    description: "Implemented secure networking solutions for the Nigerian Ministry of Defense in Abuja, ensuring robust security and reliable communications.",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
+    icon: Shield,
+    tags: ["Security", "Government", "Secure Networks"],
+    client: "Nigerian Ministry of Defense, Abuja",
+    year: "2023",
+    status: "Completed"
   },
   {
     id: 5,
-    title: "NNPC Production Facility Infrastructure",
-    category: "Oil & Gas",
-    tags: ["Production", "Infrastructure"],
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop",
-    problem: "Aging infrastructure affecting production efficiency",
-    solution: "Complete infrastructure modernization and automation",
-    result: "30% increase in production efficiency",
-    client: "NNPC Limited",
-    duration: "12 months",
-    location: "Port Harcourt, Nigeria",
-    businessLine: "Oil & Gas"
+    title: "Banking Sector Network Solutions",
+    category: "Audiovisual & Networking",
+    description: "Comprehensive network infrastructure solutions for major banking institutions, ensuring secure and reliable financial operations.",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
+    icon: Network,
+    tags: ["Banking", "Financial Services", "Network Security"],
+    client: "Leading Nigerian Banks",
+    year: "2023",
+    status: "Completed"
   },
   {
     id: 6,
-    title: "Shell Upstream Operations Support",
+    title: "Oil & Gas Infrastructure Development",
     category: "Oil & Gas",
-    tags: ["Upstream", "Operations"],
+    description: "End-to-end infrastructure development and project management for oil & gas facilities, ensuring operational excellence and safety compliance.",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop",
-    problem: "Complex logistics and operational coordination challenges",
-    solution: "Comprehensive operational support and logistics management",
-    result: "Streamlined operations with 25% cost reduction",
-    client: "Shell Nigeria",
-    duration: "18 months",
-    location: "Multiple Locations",
-    businessLine: "Oil & Gas"
+    icon: Factory,
+    tags: ["Infrastructure", "Project Management", "Safety"],
+    client: "Major Oil & Gas Companies",
+    year: "2023",
+    status: "Completed"
   }
 ];
 
-export const filters = ["All", "Audiovisual & Networking", "Oil & Gas"];
+export const filters = [
+  "All",
+  "Oil & Gas",
+  "Audiovisual & Networking"
+];
