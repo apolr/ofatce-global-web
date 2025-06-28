@@ -154,35 +154,7 @@ const AboutUs = () => {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 bg-light-grey">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-lg text-gray-700">
-              Meet the experts driving our vision forward
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {leadership.map((leader, index) => <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0">
-                <CardContent className="p-6 text-center">
-                  <img src={leader.image} alt={leader.name} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
-                  <h4 className="text-xl font-poppins font-semibold text-primary mb-2">
-                    {leader.name}
-                  </h4>
-                  <p className="text-accent font-medium mb-3">
-                    {leader.role}
-                  </p>
-                  <p className="text-gray-700 text-sm">
-                    Super-power: {leader.superpower}
-                  </p>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Company Timeline */}
       <section className="py-20">
