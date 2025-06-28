@@ -13,9 +13,13 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '1.5rem',
+			padding: '1rem',
 			screens: {
-				'2xl': '1200px'
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1400px'
 			}
 		},
 		extend: {
@@ -58,8 +62,9 @@ export default {
 				},
 			},
 			fontFamily: {
-				'poppins': ['Poppins', 'sans-serif'],
-				'roboto': ['Roboto', 'sans-serif'],
+				'poppins': ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				'roboto': ['Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				'sans': ['Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
 			},
 			fontSize: {
 				'responsive-xl': 'clamp(1.25rem, 4vw, 1.5rem)',

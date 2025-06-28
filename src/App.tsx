@@ -21,6 +21,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
+    // Enhanced scroll animation observer with better error handling
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -30,13 +31,24 @@ const App = () => {
     };
 
     const observer = new IntersectionObserver(observerCallback, {
-      threshold: 0.25,
+      threshold: 0.1,
+      rootMargin: '50px 0px',
     });
 
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-    animateElements.forEach((el) => observer.observe(el));
+    // Add a small delay to ensure DOM is ready
+    const initializeAnimations = () => {
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      animateElements.forEach((el) => {
+        observer.observe(el);
+      });
+    };
+
+    // Initialize after a brief delay
+    const timeoutId = setTimeout(initializeAnimations, 100);
 
     return () => {
+      clearTimeout(timeoutId);
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
       animateElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
@@ -47,7 +59,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="min-h-screen flex flex-col">
+          <div className="min-h-screen flex flex-col bg-background">
             <Header />
             <main className="flex-1">
               <Routes>
