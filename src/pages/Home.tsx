@@ -24,26 +24,27 @@ const Home = () => {
     }
   ];
 
+  // Client logos - Replace these URLs with actual client logo paths
   const clientLogos = [
     {
       name: "TotalEnergies",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+      logo: "/images/clients/totalenergies-logo.png" // Replace with actual TotalEnergies logo
     },
     {
       name: "Avanti",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+      logo: "/images/clients/avanti-logo.png" // Replace with actual Avanti logo
     },
     {
       name: "Ministry of Defence",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+      logo: "/images/clients/ministry-defence-logo.png" // Replace with actual Ministry of Defence logo
     },
     {
-      name: "Barcadi",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+      name: "Bacardi",
+      logo: "/images/clients/bacardi-logo.png" // Replace with actual Bacardi logo (fixed spelling)
     },
     {
       name: "Hometronics",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+      logo: "/images/clients/hometronics-logo.png" // Replace with actual Hometronics logo
     }
   ];
 
@@ -204,8 +205,13 @@ const Home = () => {
               <div key={index} className="animate-on-scroll">
                 <img 
                   src={client.logo} 
-                  alt={client.name} 
-                  className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+                  alt={`${client.name} logo`} 
+                  className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  onError={(e) => {
+                    // Fallback to placeholder if logo fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop";
+                  }}
                 />
               </div>
             ))}
