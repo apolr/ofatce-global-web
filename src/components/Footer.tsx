@@ -66,8 +66,10 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  6 Wals Street, By Odili Road,<br />
-                  Port Harcourt, Rivers State, Nigeria
+                  #37 Etitinwo Street, off Elekahia Road<br />
+                  Port Harcourt, Rivers State, Nigeria<br />
+                  <br />
+                  105, Igi Olugbin Street Palmgrove, Lagos, Nigeria
                 </p>
               </div>
               <div className="flex items-center space-x-3">
