@@ -11,8 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <img src="/lovable-uploads/c8ae3d42-cb6b-4177-b497-e1f1ac934c2c.png" alt="OFATCE Global Limited" className="h-12 w-auto object-contain" />
             <p className="text-gray-300 text-sm leading-relaxed">
-              Modern AV & networking solutions for Nigeria's most demanding organisations. 
-              Design → Deploy → Maintain since 2006.
+              Two specialized business lines under one trusted brand. Delivering excellence in Oil & Gas solutions and Audiovisual & Networking services since 2006.
             </p>
           </div>
 
@@ -22,10 +21,10 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 { name: "About Us", path: "/about-us" },
-                { name: "Services", path: "/services" },
-                { name: "Industries", path: "/industries" },
-                { name: "Portfolio", path: "/portfolio" },
-                { name: "Why OFATCE", path: "/why-ofatce" }
+                { name: "Our Businesses", path: "/our-businesses" },
+                { name: "Oil & Gas", path: "/oil-gas" },
+                { name: "Audiovisual & Networking", path: "/audiovisual-networking" },
+                { name: "Projects", path: "/projects" }
               ].map(link => (
                 <li key={link.name}>
                   <Link to={link.path} className="text-gray-300 hover:text-accent transition-colors text-sm">
@@ -36,17 +35,28 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Business Lines */}
           <div className="space-y-4">
-            <h4 className="font-poppins font-semibold text-lg">Our Services</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>Structured Cabling & Networking</li>
-              <li>Audiovisual Systems</li>
-              <li>Video-Conferencing</li>
-              <li>Security Operations Centre</li>
-              <li>Building Automation</li>
-              <li>Maintenance & Support</li>
-            </ul>
+            <h4 className="font-poppins font-semibold text-lg">Our Business Lines</h4>
+            <div className="space-y-3">
+              <div>
+                <h5 className="text-sm font-medium text-accent mb-1">Oil & Gas Solutions</h5>
+                <ul className="space-y-1 text-xs text-gray-300">
+                  <li>Exploration & Production Support</li>
+                  <li>Infrastructure & Project Management</li>
+                  <li>Maintenance & Operational Safety</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-sm font-medium text-accent mb-1">Audiovisual & Networking</h5>
+                <ul className="space-y-1 text-xs text-gray-300">
+                  <li>Audio-Visual Systems</li>
+                  <li>Computer Networking & Cabling</li>
+                  <li>Video Conferencing</li>
+                  <li>Security Operations Center</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -86,8 +96,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-300 text-sm">© 2025 OFATCE Global Limited. All rights reserved.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-300">
-              <span>18+ Years Experience</span>
-              <span>ISO Quality Standards</span>
+              <span>19+ Years Experience</span>
+              <span>Two Specialized Business Lines</span>
               <span>Nigerian Local Content</span>
             </div>
           </div>
