@@ -1,87 +1,65 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Monitor, Network, Factory, Wrench, ArrowRight, Users, Award, TrendingUp } from "lucide-react";
-
 const Home = () => {
-  const businessLines = [
-    {
-      title: "Oil & Gas Solutions",
-      description: "Comprehensive services for exploration, production, and infrastructure management",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop",
-      icon: Factory,
-      link: "/oil-gas",
-      highlights: ["Exploration Services", "Production Support", "Infrastructure Management"]
-    },
-    {
-      title: "Audiovisual & Networking",
-      description: "Complete AV systems, enterprise networking, and structured cabling solutions",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-      icon: Monitor,
-      link: "/audiovisual-networking",
-      highlights: ["Video Conferencing", "Network Infrastructure", "Automation Systems"]
-    }
-  ];
+  const businessLines = [{
+    title: "Oil & Gas Solutions",
+    description: "Comprehensive services for exploration, production, and infrastructure management",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop",
+    icon: Factory,
+    link: "/oil-gas",
+    highlights: ["Exploration Services", "Production Support", "Infrastructure Management"]
+  }, {
+    title: "Audiovisual & Networking",
+    description: "Complete AV systems, enterprise networking, and structured cabling solutions",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
+    icon: Monitor,
+    link: "/audiovisual-networking",
+    highlights: ["Video Conferencing", "Network Infrastructure", "Automation Systems"]
+  }];
 
   // Client logos - Replace these URLs with actual client logo paths
-  const clientLogos = [
-    {
-      name: "TotalEnergies",
-      logo: "/images/clients/totalenergies-logo.png" // Replace with actual TotalEnergies logo
-    },
-    {
-      name: "Avanti",
-      logo: "/images/clients/avanti-logo.png" // Replace with actual Avanti logo
-    },
-    {
-      name: "Ministry of Defence",
-      logo: "/images/clients/ministry-defence-logo.png" // Replace with actual Ministry of Defence logo
-    },
-    {
-      name: "Bacardi",
-      logo: "/images/clients/bacardi-logo.png" // Replace with actual Bacardi logo (fixed spelling)
-    },
-    {
-      name: "Hometronics",
-      logo: "/images/clients/hometronics-logo.png" // Replace with actual Hometronics logo
-    }
-  ];
-
-  const quickStats = [
-    {
-      number: "18+",
-      label: "Years in Business",
-      icon: Award
-    },
-    {
-      number: "250+",
-      label: "Projects Delivered",
-      icon: TrendingUp
-    },
-    {
-      number: "99.99%",
-      label: "System Reliability",
-      icon: Users
-    }
-  ];
-
-  return (
-    <div>
+  const clientLogos = [{
+    name: "TotalEnergies",
+    logo: "/images/clients/totalenergies-logo.png" // Replace with actual TotalEnergies logo
+  }, {
+    name: "Avanti",
+    logo: "/images/clients/avanti-logo.png" // Replace with actual Avanti logo
+  }, {
+    name: "Ministry of Defence",
+    logo: "/images/clients/ministry-defence-logo.png" // Replace with actual Ministry of Defence logo
+  }, {
+    name: "Bacardi",
+    logo: "/images/clients/bacardi-logo.png" // Replace with actual Bacardi logo (fixed spelling)
+  }, {
+    name: "Hometronics",
+    logo: "/images/clients/hometronics-logo.png" // Replace with actual Hometronics logo
+  }];
+  const quickStats = [{
+    number: "18+",
+    label: "Years in Business",
+    icon: Award
+  }, {
+    number: "250+",
+    label: "Projects Delivered",
+    icon: TrendingUp
+  }, {
+    number: "99.99%",
+    label: "System Reliability",
+    icon: Users
+  }];
+  return <div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')`
-        }} />
+        backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')`
+      }} />
         <div className="absolute inset-0 hero-overlay" />
         
         <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto animate-on-scroll">
-          <h1 className="text-responsive-5xl font-poppins font-bold mb-6 leading-tight">
-            Two Specialized Business Lines Under One Trusted Brand
-          </h1>
-          <p className="text-responsive-xl mb-8 text-gray-200 max-w-4xl mx-auto">
-            OFATCE Global Limited delivers excellence across Oil & Gas Solutions and Audiovisual & Networking Services—serving Nigeria's most demanding organizations since 2006.
-          </p>
+          <h1 className="text-responsive-5xl font-poppins font-bold mb-6 leading-tight">Your Trusted Partner</h1>
+          <p className="text-responsive-xl mb-8 text-gray-200 max-w-4xl mx-auto">OFATCE Global Limited delivers excellence across Oil &amp; Gas Solutions and Audiovisual &amp; Networking Services. Serving Nigeria's most demanding organizations since 2006.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/our-businesses">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-roboto font-medium px-8 py-3 text-lg">
@@ -110,14 +88,9 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {businessLines.map((business, index) => (
-              <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0 overflow-hidden">
+            {businessLines.map((business, index) => <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0 overflow-hidden">
                 <div className="relative">
-                  <img 
-                    src={business.image} 
-                    alt={business.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  <img src={business.image} alt={business.title} className="w-full h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex items-center mb-2">
@@ -137,12 +110,10 @@ const Home = () => {
                   <div className="mb-6">
                     <h4 className="font-roboto font-semibold text-primary mb-2">Key Services:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      {business.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-center">
+                      {business.highlights.map((highlight, idx) => <li key={idx} className="flex items-center">
                           <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
                           {highlight}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                   
@@ -153,8 +124,7 @@ const Home = () => {
                     </Button>
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -170,8 +140,7 @@ const Home = () => {
               Founded in 2006, OFATCE Global Limited has evolved into a dual-focused organization, combining our expertise in comprehensive oil & gas services with cutting-edge technology solutions. Our commitment to excellence, innovation, and reliable delivery remains constant across both business lines.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {quickStats.map((stat, index) => (
-                <div key={index} className="text-center">
+              {quickStats.map((stat, index) => <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="h-8 w-8 text-accent" />
                   </div>
@@ -181,8 +150,7 @@ const Home = () => {
                   <p className="text-gray-600">
                     {stat.label}
                   </p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -201,20 +169,13 @@ const Home = () => {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            {clientLogos.map((client, index) => (
-              <div key={index} className="animate-on-scroll">
-                <img 
-                  src={client.logo} 
-                  alt={`${client.name} logo`} 
-                  className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                  onError={(e) => {
-                    // Fallback to placeholder if logo fails to load
-                    const target = e.target as HTMLImageElement;
-                    target.src = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop";
-                  }}
-                />
-              </div>
-            ))}
+            {clientLogos.map((client, index) => <div key={index} className="animate-on-scroll">
+                <img src={client.logo} alt={`${client.name} logo`} className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={e => {
+              // Fallback to placeholder if logo fails to load
+              const target = e.target as HTMLImageElement;
+              target.src = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop";
+            }} />
+              </div>)}
           </div>
         </div>
       </section>
@@ -242,8 +203,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
