@@ -1,21 +1,27 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about-us" },
-    { name: "Services", path: "/services" },
-    { name: "Industries", path: "/industries" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Quality", path: "/quality-policy" },
-    { name: "Why OFATCE", path: "/why-ofatce" },
+    { 
+      name: "Our Businesses", 
+      path: "/our-businesses",
+      hasDropdown: true,
+      dropdownItems: [
+        { name: "Audiovisual & Networking", path: "/audiovisual-networking" },
+        { name: "Oil & Gas", path: "/oil-gas" }
+      ]
+    },
+    { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -37,20 +43,54 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`font-roboto font-medium transition-colors hover:text-accent text-sm ${
-                  isActive(item.path)
-                    ? "text-accent border-b-2 border-accent pb-1"
-                    : "text-gray-700"
-                }`}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setIsDropdownOpen(true)}
+                    onMouseLeave={() => setIsDropdownOpen(false)}
+                  >
+                    <button
+                      className={`font-roboto font-medium transition-colors hover:text-accent text-sm flex items-center ${
+                        isActive(item.path) || item.dropdownItems?.some(dropItem => isActive(dropItem.path))
+                          ? "text-accent border-b-2 border-accent pb-1"
+                          : "text-gray-700"
+                      }`}
+                    >
+                      {item.name}
+                      <ChevronDown className="ml-1 h-4 w-4" />
+                    </button>
+                    {isDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md border z-50">
+                        {item.dropdownItems?.map((dropItem) => (
+                          <Link
+                            key={dropItem.name}
+                            to={dropItem.path}
+                            className={`block px-4 py-3 text-sm font-roboto transition-colors hover:bg-gray-50 hover:text-accent ${
+                              isActive(dropItem.path) ? "text-accent bg-accent/10" : "text-gray-700"
+                            }`}
+                          >
+                            {dropItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`font-roboto font-medium transition-colors hover:text-accent text-sm ${
+                      isActive(item.path)
+                        ? "text-accent border-b-2 border-accent pb-1"
+                        : "text-gray-700"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
-
 
           {/* Mobile Menu Button */}
           <button
@@ -71,28 +111,34 @@ const Header = () => {
           <div className="lg:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-2">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`px-3 py-2 rounded-md font-roboto font-medium transition-colors ${
-                    isActive(item.path)
-                      ? "text-accent bg-accent/10"
-                      : "text-gray-700 hover:text-accent hover:bg-gray-50"
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  <Link
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`px-3 py-2 rounded-md font-roboto font-medium transition-colors ${
+                      isActive(item.path)
+                        ? "text-accent bg-accent/10"
+                        : "text-gray-700 hover:text-accent hover:bg-gray-50"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.hasDropdown && item.dropdownItems?.map((dropItem) => (
+                    <Link
+                      key={dropItem.name}
+                      to={dropItem.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`ml-4 px-3 py-2 rounded-md font-roboto font-medium transition-colors text-sm ${
+                        isActive(dropItem.path)
+                          ? "text-accent bg-accent/10"
+                          : "text-gray-600 hover:text-accent hover:bg-gray-50"
+                      }`}
+                    >
+                      {dropItem.name}
+                    </Link>
+                  ))}
+                </div>
               ))}
-              <Link
-                to="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="mt-4"
-              >
-                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Book Discovery Call
-                </Button>
-              </Link>
             </nav>
           </div>
         )}

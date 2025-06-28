@@ -8,12 +8,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import Services from "./pages/Services";
-import Industries from "./pages/Industries";
-import Portfolio from "./pages/Portfolio";
-import QualityPolicy from "./pages/QualityPolicy";
-import WhyOfatce from "./pages/WhyOfatce";
-import Certification from "./pages/Certification";
+import OurBusinesses from "./pages/OurBusinesses";
+import AudiovisualNetworking from "./pages/AudiovisualNetworking";
+import OilGas from "./pages/OilGas";
+import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import WhatsAppWidget from "./components/WhatsAppWidget";
@@ -55,10 +53,10 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/quality-policy" element={<QualityPolicy />} />
-                <Route path="/certification" element={<Certification />} />
+                <Route path="/our-businesses" element={<OurBusinesses />} />
+                <Route path="/audiovisual-networking" element={<AudiovisualNetworking />} />
+                <Route path="/oil-gas" element={<OilGas />} />
+                <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

@@ -1,139 +1,214 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Monitor, Network, Factory, Shield, Clock, Award, Users, Zap } from "lucide-react";
+import { Monitor, Network, Factory, Wrench, ArrowRight, Users, Award, TrendingUp } from "lucide-react";
+
 const Home = () => {
-  const valueTrio = [{
-    icon: Monitor,
-    title: "Design",
-    description: "Custom solutions tailored to your specific requirements and environment"
-  }, {
-    icon: Network,
-    title: "Deploy",
-    description: "Professional installation with minimal disruption to your operations"
-  }, {
-    icon: Shield,
-    title: "Maintain",
-    description: "Lifetime support ensuring optimal performance and reliability"
-  }];
-  const clientLogos = [{
-    name: "TotalEnergies",
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
-  }, {
-    name: "Avanti",
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
-  }, {
-    name: "Ministry of Defence",
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
-  }, {
-    name: "Barcadi",
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
-  }, {
-    name: "Hometronics",
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
-  }];
-  const quickStats = [{
-    number: "18+",
-    label: "Years in Business"
-  }, {
-    number: "250+",
-    label: "Projects Delivered"
-  }, {
-    number: "99.99%",
-    label: "Network Uptime"
-  }];
-  return <div>
+  const businessLines = [
+    {
+      title: "Audiovisual & Networking",
+      description: "Complete AV systems, enterprise networking, and structured cabling solutions",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
+      icon: Monitor,
+      link: "/audiovisual-networking",
+      highlights: ["Video Conferencing", "Network Infrastructure", "Automation Systems"]
+    },
+    {
+      title: "Oil & Gas Solutions",
+      description: "Comprehensive services for exploration, production, and infrastructure management",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop",
+      icon: Factory,
+      link: "/oil-gas",
+      highlights: ["Exploration Services", "Production Support", "Infrastructure Management"]
+    }
+  ];
+
+  const clientLogos = [
+    {
+      name: "TotalEnergies",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+    },
+    {
+      name: "Avanti",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+    },
+    {
+      name: "Ministry of Defence",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+    },
+    {
+      name: "Barcadi",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+    },
+    {
+      name: "Hometronics",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop"
+    }
+  ];
+
+  const quickStats = [
+    {
+      number: "18+",
+      label: "Years in Business",
+      icon: Award
+    },
+    {
+      number: "250+",
+      label: "Projects Delivered",
+      icon: TrendingUp
+    },
+    {
+      number: "99.99%",
+      label: "System Reliability",
+      icon: Users
+    }
+  ];
+
+  return (
+    <div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')`
-      }} />
+          backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')`
+        }} />
         <div className="absolute inset-0 hero-overlay" />
         
-        <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto animate-on-scroll">
+        <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto animate-on-scroll">
           <h1 className="text-responsive-5xl font-poppins font-bold mb-6 leading-tight">
-            Modern AV & Networking Solutions for Nigeria's Most Demanding Organisations
+            Two Specialized Business Lines Under One Trusted Brand
           </h1>
-          <p className="text-responsive-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Founded in 2006, OFATCE GLOBAL LTD delivers seamless connectivity, immersive audiovisual experiences and enterprise-grade security—end-to-end.
+          <p className="text-responsive-xl mb-8 text-gray-200 max-w-4xl mx-auto">
+            OFATCE Global Limited delivers excellence across Audiovisual & Networking Solutions and Oil & Gas Services—serving Nigeria's most demanding organizations since 2006.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
+            <Link to="/our-businesses">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-roboto font-medium px-8 py-3 text-lg">
-                Book a Free 30-Minute Discovery Call
+                Explore Our Businesses
               </Button>
             </Link>
-            <Link to="/services">
+            <Link to="/contact">
               <Button size="lg" variant="outline" className="border-white hover:bg-white font-roboto font-medium px-8 py-3 text-lg text-blue-950">
-                Our Services
+                Get in Touch
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Value Trio Section */}
+      {/* Business Lines Section */}
       <section className="py-20 bg-light-grey">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
-              Design → Deploy → Maintain
+              Our Two Core Business Lines
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              One partner from concept to lifetime support
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Specialized expertise in technology solutions and energy sector services, delivering exceptional results across diverse industries
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {valueTrio.map((item, index) => <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <item.icon className="h-8 w-8 text-accent" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {businessLines.map((business, index) => (
+              <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0 overflow-hidden">
+                <div className="relative">
+                  <img 
+                    src={business.image} 
+                    alt={business.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="flex items-center mb-2">
+                      <business.icon className="h-8 w-8 text-white mr-3" />
+                      <h3 className="text-xl font-poppins font-bold text-white">
+                        {business.title}
+                      </h3>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-poppins font-semibold text-primary mb-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Stats */}
-      <section className="py-16 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {quickStats.map((stat, index) => <div key={index} className="animate-on-scroll">
-                <div className="text-4xl font-poppins font-bold text-accent mb-2">
-                  {stat.number}
                 </div>
-                <p className="text-gray-200 text-lg">
-                  {stat.label}
-                </p>
-              </div>)}
+                
+                <CardContent className="p-6">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {business.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-roboto font-semibold text-primary mb-2">Key Services:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {business.highlights.map((highlight, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Link to={business.link}>
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-white font-roboto">
+                      Explore {business.title}
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Client Logos */}
-      <section className="py-16 bg-white">
+      {/* Company Overview */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center animate-on-scroll">
+            <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-6">
+              One Company, Two Specializations
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Founded in 2006, OFATCE Global Limited has evolved into a dual-focused organization, combining our expertise in cutting-edge technology solutions with comprehensive oil & gas services. Our commitment to excellence, innovation, and reliable delivery remains constant across both business lines.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {quickStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="h-8 w-8 text-accent" />
+                  </div>
+                  <div className="text-3xl font-poppins font-bold text-accent mb-2">
+                    {stat.number}
+                  </div>
+                  <p className="text-gray-600">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Showcase */}
+      <section className="py-16 bg-light-grey">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll">
             <h2 className="text-2xl font-poppins font-semibold text-primary mb-4">
               Trusted by Industry Leaders
             </h2>
             <p className="text-gray-600">
-              TotalEnergies, Avanti, Ministry of Defence, Barcadi, Hometronics and more
+              Serving diverse sectors with excellence across both business lines
             </p>
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            {clientLogos.map((client, index) => <div key={index} className="animate-on-scroll">
-                <img src={client.logo} alt={client.name} className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
-              </div>)}
+            {clientLogos.map((client, index) => (
+              <div key={index} className="animate-on-scroll">
+                <img 
+                  src={client.logo} 
+                  alt={client.name} 
+                  className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -142,16 +217,27 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90 text-white">
         <div className="container mx-auto px-4 text-center animate-on-scroll">
           <h2 className="text-responsive-3xl font-poppins font-bold mb-6">
-            Ready to Transform Your Technology Infrastructure?
+            Ready to Partner with Us?
           </h2>
           <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
-            Get expert guidance on your next project with a free discovery call
+            Discover how our specialized business lines can deliver exceptional results for your organization
           </p>
-          <Link to="/contact">
-            
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/our-businesses">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-roboto font-medium px-8 py-3 text-lg">
+                Explore Our Services
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-white hover:bg-white font-roboto font-medium px-8 py-3 text-lg text-blue-950">
+                Contact Us Today
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;
