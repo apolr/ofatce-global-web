@@ -44,9 +44,12 @@ const Contact = () => {
                         <h3 className="font-roboto font-semibold text-gray-800 mb-2">Office Address</h3>
                         <p className="text-gray-700 leading-relaxed">
                           #37 Etitinwo Street, off Elekahia Road<br />
-                          Port Harcourt, Rivers State, Nigeria<br /><br />
+                          Port Harcourt, Rivers State<br />
+                          Nigeria<br /><br />
                           
-                          105, Igi Olugbin Street Palmgrove, Lagos, Nigeria<br />
+                          105, Igi Olugbin Street<br />
+                          Palmgrove, Lagos <br />
+                          Nigeria<br />
                         </p>
                       </div>
                     </div>
