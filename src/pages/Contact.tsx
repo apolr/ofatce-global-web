@@ -43,8 +43,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-roboto font-semibold text-gray-800 mb-2">Office Address</h3>
                         <p className="text-gray-700 leading-relaxed">
-                          6 Wals Street, By Odili Road,<br />
-                          Port Harcourt, Rivers State, Nigeria
+                          #37 Etitinwo Street, off Elekahia Road<br />
+                          Port Harcourt, Rivers State, Nigeria<br /><br />
+                          
+                          105, Igi Olugbin Street Palmgrove, Lagos, Nigeria<br />
                         </p>
                       </div>
                     </div>
