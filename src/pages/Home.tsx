@@ -19,23 +19,6 @@ const Home = () => {
     highlights: ["Video Conferencing", "Network Infrastructure", "Automation Systems"]
   }];
 
-  // Client logos - Replace these URLs with actual client logo paths
-  const clientLogos = [{
-    name: "TotalEnergies",
-    logo: "/images/clients/totalenergies-logo.png" // Replace with actual TotalEnergies logo
-  }, {
-    name: "Avanti",
-    logo: "/images/clients/avanti-logo.png" // Replace with actual Avanti logo
-  }, {
-    name: "Ministry of Defence",
-    logo: "/images/clients/ministry-defence-logo.png" // Replace with actual Ministry of Defence logo
-  }, {
-    name: "Bacardi",
-    logo: "/images/clients/bacardi-logo.png" // Replace with actual Bacardi logo (fixed spelling)
-  }, {
-    name: "Hometronics",
-    logo: "/images/clients/hometronics-logo.png" // Replace with actual Hometronics logo
-  }];
   const quickStats = [{
     number: "18+",
     label: "Years in Business",
@@ -156,29 +139,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Client Showcase */}
-      <section className="py-16 bg-light-grey">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="text-2xl font-poppins font-semibold text-primary mb-4">
-              Trusted by Industry Leaders
-            </h2>
-            <p className="text-gray-600">
-              Serving diverse sectors with excellence across both business lines
-            </p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            {clientLogos.map((client, index) => <div key={index} className="animate-on-scroll">
-                <img src={client.logo} alt={`${client.name} logo`} className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={e => {
-              // Fallback to placeholder if logo fails to load
-              const target = e.target as HTMLImageElement;
-              target.src = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop";
-            }} />
-              </div>)}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90 text-white">
