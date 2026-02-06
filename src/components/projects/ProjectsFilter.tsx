@@ -1,4 +1,3 @@
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Fuel, Tv } from "lucide-react";
 
 interface ProjectsFilterProps {
@@ -27,13 +26,16 @@ const ProjectsFilter = ({ filters, activeFilter, onFilterChange, filteredCount, 
     <section className="py-12 bg-light-grey">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-6 animate-on-scroll">
-          <Tabs value={activeFilter} onValueChange={onFilterChange} className="w-full max-w-2xl">
-            <TabsList className="grid w-full grid-cols-3 h-auto p-1 bg-white shadow-md">
-              {filters.map((filter) => (
-                <TabsTrigger
+          <div className="flex w-full max-w-2xl bg-white shadow-md rounded-md p-1">
+            {filters.map((filter) => {
+              const isActive = activeFilter === filter;
+              return (
+                <button
                   key={filter}
-                  value={filter}
-                  className={`flex items-center justify-center py-3 px-4 font-roboto font-medium transition-all data-[state=active]:shadow-sm ${getFilterColor(filter, activeFilter === filter)}`}
+                  onClick={() => onFilterChange(filter)}
+                  className={`flex-1 flex items-center justify-center py-3 px-4 font-roboto font-medium transition-all rounded-sm ${
+                    isActive ? getFilterColor(filter, true) : "hover:bg-gray-100"
+                  }`}
                 >
                   {getFilterIcon(filter)}
                   <span className="hidden sm:inline">{filter}</span>
@@ -42,17 +44,17 @@ const ProjectsFilter = ({ filters, activeFilter, onFilterChange, filteredCount, 
                   </span>
                   {projectCounts[filter] !== undefined && (
                     <span className={`ml-2 px-2 py-0.5 text-xs rounded-full ${
-                      activeFilter === filter 
+                      isActive 
                         ? "bg-white/20 text-white" 
                         : "bg-gray-200 text-gray-600"
                     }`}>
                       {projectCounts[filter]}
                     </span>
                   )}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </Tabs>
+                </button>
+              );
+            })}
+          </div>
           
           <p className="text-sm text-gray-600">
             Showing {filteredCount} project{filteredCount !== 1 ? 's' : ''} 
