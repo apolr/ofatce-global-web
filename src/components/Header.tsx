@@ -61,15 +61,20 @@ const Header = () => {
                       <ChevronDown className="ml-1 h-4 w-4" />
                     </button>
                     {isDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md border z-50">
-                        {item.dropdownItems?.map((dropItem) => (
+                      <div className="absolute top-full left-0 mt-1 w-72 bg-white shadow-lg rounded-md border z-50 overflow-hidden">
+                        {item.dropdownItems?.map((dropItem, idx) => (
                           <Link
                             key={dropItem.name}
                             to={dropItem.path}
-                            className={`block px-4 py-3 text-sm font-roboto transition-colors hover:bg-gray-50 hover:text-accent ${
-                              isActive(dropItem.path) ? "text-accent bg-accent/10" : "text-gray-700"
+                            className={`flex items-center px-4 py-3 text-sm font-roboto transition-colors ${
+                              isActive(dropItem.path) 
+                                ? idx === 0 ? "bg-orange-50 text-orange-700" : "bg-blue-50 text-blue-700"
+                                : "text-gray-700 hover:bg-gray-50"
                             }`}
                           >
+                            <span className={`w-3 h-3 rounded-full mr-3 ${
+                              idx === 0 ? "bg-orange-500" : "bg-blue-500"
+                            }`}></span>
                             {dropItem.name}
                           </Link>
                         ))}

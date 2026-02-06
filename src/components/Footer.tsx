@@ -38,24 +38,30 @@ const Footer = () => {
           {/* Business Lines */}
           <div className="space-y-4">
             <h4 className="font-poppins font-semibold text-lg">Our Business Lines</h4>
-            <div className="space-y-3">
-              <div>
-                <h5 className="text-sm font-medium text-accent mb-1">Oil & Gas Solutions</h5>
-                <ul className="space-y-1 text-xs text-gray-300">
+            <div className="space-y-4">
+              <Link to="/oil-gas" className="block group">
+                <div className="flex items-center mb-1">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                  <h5 className="text-sm font-medium text-orange-400 group-hover:text-orange-300 transition-colors">Oil & Gas Solutions</h5>
+                </div>
+                <ul className="space-y-1 text-xs text-gray-300 ml-4">
                   <li>Exploration & Production Support</li>
                   <li>Infrastructure & Project Management</li>
                   <li>Maintenance & Operational Safety</li>
                 </ul>
-              </div>
-              <div>
-                <h5 className="text-sm font-medium text-accent mb-1">Audiovisual & Networking</h5>
-                <ul className="space-y-1 text-xs text-gray-300">
+              </Link>
+              <Link to="/audiovisual-networking" className="block group">
+                <div className="flex items-center mb-1">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                  <h5 className="text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">Audiovisual & Networking</h5>
+                </div>
+                <ul className="space-y-1 text-xs text-gray-300 ml-4">
                   <li>Audio-Visual Systems</li>
                   <li>Computer Networking & Cabling</li>
                   <li>Video Conferencing</li>
                   <li>Security Operations Center</li>
                 </ul>
-              </div>
+              </Link>
             </div>
           </div>
 
