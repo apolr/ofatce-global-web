@@ -8,23 +8,40 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 36% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 36% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 210 36% 12%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --popover-foreground: 210 36% 12%;
+    
+    /* Brand Primary - Deep Navy #01233D */
+    --primary: 207 97% 12%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Brand Accent - Safety Orange #FF7300 */
+    --accent: 27 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 36% 12%;
+    --muted: 210 40% 97%;
+    --muted-foreground: 215 16% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 207 97% 12%;
     --radius: 0.5rem;
+    
+    /* Oil & Gas Business Line - Orange Theme */
+    --oil-gas: 24 95% 53%;
+    --oil-gas-light: 33 100% 96%;
+    --oil-gas-dark: 21 90% 48%;
+    
+    /* Audiovisual & Networking Business Line - Teal/Cyan Theme */
+    --av-tech: 189 94% 43%;
+    --av-tech-light: 185 96% 95%;
+    --av-tech-dark: 192 91% 36%;
   }
 
   * {
@@ -82,7 +99,7 @@
   }
 
   .hero-overlay {
-    background: linear-gradient(135deg, rgba(1, 35, 61, 0.8) 0%, rgba(1, 35, 61, 0.6) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.85) 0%, hsl(var(--primary) / 0.7) 100%);
   }
 
   .text-responsive-xl {
@@ -103,5 +120,14 @@
 
   .text-responsive-5xl {
     font-size: clamp(3rem, 8vw, 4rem);
+  }
+  
+  /* Business line gradient backgrounds */
+  .bg-oil-gas-gradient {
+    background: linear-gradient(135deg, hsl(var(--oil-gas)) 0%, hsl(var(--oil-gas-dark)) 100%);
+  }
+  
+  .bg-av-tech-gradient {
+    background: linear-gradient(135deg, hsl(var(--av-tech)) 0%, hsl(var(--av-tech-dark)) 100%);
   }
 }
