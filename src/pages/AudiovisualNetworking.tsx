@@ -51,12 +51,12 @@ const AudiovisualNetworking = () => {
   ];
 
   // Filter AV/Networking projects
-  const avProjects = portfolioItems.filter(item => item.businessLine === "AV/Networking").slice(0, 4);
+  const avProjects = portfolioItems.filter(item => item.businessLine === "Audiovisual & Networking").slice(0, 4);
 
   return (
     <div className="pt-20 py-0">
-      {/* Hero Section - Blue themed */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 to-blue-600 text-white relative overflow-hidden">
+      {/* Hero Section - AV/Tech themed */}
+      <section className="py-20 bg-av-tech-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=1920&h=600&fit=crop')] bg-cover bg-center" />
         </div>
@@ -68,11 +68,11 @@ const AudiovisualNetworking = () => {
             <h1 className="text-responsive-4xl font-poppins font-bold mb-6">
               Audiovisual & Networking Solutions
             </h1>
-            <p className="text-xl text-blue-100 leading-relaxed mb-8">
+            <p className="text-xl text-white/90 leading-relaxed mb-8">
               OFATCE GLOBAL LTD is a trusted partner in delivering comprehensive audiovisual, cabling, and computer networking solutions. We design, procure, install, and maintain robust technology infrastructures that enhance communication and productivity.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-100 font-roboto font-medium px-8 py-3 text-lg">
+              <Button size="lg" className="bg-white text-av-tech hover:bg-av-tech-light font-roboto font-medium px-8 py-3 text-lg">
                 Discuss Your Technology Needs
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
@@ -88,29 +88,29 @@ const AudiovisualNetworking = () => {
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
               Our Specialized Services
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               From design to deployment to maintenance, we deliver complete technology solutions that drive business success
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="card-hover animate-on-scroll bg-white shadow-lg border-0 border-l-4 border-l-blue-500">
+              <Card key={index} className="card-hover animate-on-scroll bg-card shadow-lg border-0 border-l-4 border-l-av-tech">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-8 w-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-av-tech-light rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="h-8 w-8 text-av-tech" />
                   </div>
                   <h3 className="text-xl font-poppins font-semibold text-primary mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 mb-4 leading-relaxed">
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700">{feature}</span>
+                        <div className="w-2 h-2 bg-av-tech rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                        <span className="text-muted-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -123,28 +123,28 @@ const AudiovisualNetworking = () => {
 
       {/* Recent Projects */}
       {avProjects.length > 0 && (
-        <section className="py-20 bg-blue-50">
+        <section className="py-20 bg-av-tech-light">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-on-scroll">
               <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
                 Recent AV & Networking Projects
               </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Showcasing our commitment to delivering tailored, high-quality technology solutions
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {avProjects.map((project) => (
-                <Card key={project.id} className="animate-on-scroll bg-white shadow-lg border-0 border-t-4 border-t-blue-500">
+                <Card key={project.id} className="animate-on-scroll bg-card shadow-lg border-0 border-t-4 border-t-av-tech">
                   <CardContent className="p-6">
                     <h3 className="text-lg font-poppins font-semibold text-primary mb-2">
                       {project.client}
                     </h3>
-                    <p className="text-blue-600 font-medium mb-3 text-sm">
+                    <p className="text-av-tech font-medium mb-3 text-sm">
                       {project.tags[0]}
                     </p>
-                    <p className="text-gray-700 text-sm">
+                    <p className="text-muted-foreground text-sm">
                       {project.solution.substring(0, 100)}...
                     </p>
                   </CardContent>
@@ -154,7 +154,7 @@ const AudiovisualNetworking = () => {
 
             <div className="text-center mt-12">
               <Link to="/projects">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white font-roboto">
+                <Button className="bg-av-tech hover:bg-av-tech-dark text-white font-roboto">
                   View All Projects
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
@@ -165,28 +165,28 @@ const AudiovisualNetworking = () => {
       )}
 
       {/* Performance Stats */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll">
             <h2 className="text-2xl font-poppins font-bold text-primary mb-4">
               Proven Performance
             </h2>
-            <p className="text-gray-700">
+            <p className="text-muted-foreground">
               Delivering measurable results across all technology implementations
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
-              <Card key={index} className="animate-on-scroll bg-white shadow-lg border-0">
+              <Card key={index} className="animate-on-scroll bg-card shadow-lg border-0">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="h-8 w-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-av-tech-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="h-8 w-8 text-av-tech" />
                   </div>
-                  <div className="text-3xl font-poppins font-bold text-blue-600 mb-2">
+                  <div className="text-3xl font-poppins font-bold text-av-tech mb-2">
                     {stat.number}
                   </div>
-                  <p className="text-gray-700">
+                  <p className="text-muted-foreground">
                     {stat.label}
                   </p>
                 </CardContent>
@@ -197,13 +197,13 @@ const AudiovisualNetworking = () => {
       </section>
 
       {/* Quality Assurance */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-av-tech-light">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-on-scroll">
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-6">
               Quality Assurance & Expertise
             </h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               We deploy rigorous quality processes, conduct thorough performance tests, ensure efficient cable management, and configure servers to optimize performance and data integrity. Our team stays updated on the latest technologies.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -214,13 +214,13 @@ const AudiovisualNetworking = () => {
                 { icon: Network, title: "Reliability", description: "99.99% uptime guarantee" }
               ].map((value, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="h-8 w-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-av-tech-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="h-8 w-8 text-av-tech" />
                   </div>
                   <h4 className="font-poppins font-semibold text-primary mb-2">
                     {value.title}
                   </h4>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-muted-foreground">
                     {value.description}
                   </p>
                 </div>
@@ -231,14 +231,14 @@ const AudiovisualNetworking = () => {
       </section>
 
       {/* Contact Section for AV */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-av-tech text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 animate-on-scroll">
               <h2 className="text-responsive-3xl font-poppins font-bold mb-4">
                 Contact Our AV & Networking Team
               </h2>
-              <p className="text-xl text-blue-100">
+              <p className="text-xl text-white/80">
                 Ready to transform your technology infrastructure? Our specialists are here to help.
               </p>
             </div>
@@ -251,7 +251,7 @@ const AudiovisualNetworking = () => {
                   </div>
                   <div>
                     <h3 className="font-roboto font-semibold text-white mb-2">Call Us</h3>
-                    <p className="text-blue-100">
+                    <p className="text-white/80">
                       <a href="tel:+2348028636198" className="hover:text-white transition-colors">
                         +234 802 863 6198
                       </a>
@@ -267,7 +267,7 @@ const AudiovisualNetworking = () => {
                   </div>
                   <div>
                     <h3 className="font-roboto font-semibold text-white mb-2">Email Us</h3>
-                    <p className="text-blue-100">
+                    <p className="text-white/80">
                       <a href="mailto:info@ofatceglobal.com" className="hover:text-white transition-colors">
                         info@ofatceglobal.com
                       </a>
@@ -279,7 +279,7 @@ const AudiovisualNetworking = () => {
 
             <div className="text-center mt-12 animate-on-scroll">
               <Link to="/contact">
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-100 font-roboto font-medium px-8 py-3 text-lg">
+                <Button size="lg" className="bg-white text-av-tech hover:bg-av-tech-light font-roboto font-medium px-8 py-3 text-lg">
                   Send Inquiry
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>

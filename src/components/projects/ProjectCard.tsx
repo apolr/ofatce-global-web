@@ -1,46 +1,36 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Eye, Calendar, MapPin, Monitor, Factory, Fuel, Tv } from "lucide-react";
+import { Eye, Calendar, MapPin, Fuel, Tv } from "lucide-react";
+import type { Project } from "@/data/projectsData";
 
 interface ProjectCardProps {
-  project: {
-    id: number;
-    title: string;
-    category: string;
-    tags: string[];
-    image: string;
-    problem: string;
-    solution: string;
-    result: string;
-    client: string;
-    duration: string;
-    location: string;
-    businessLine: string;
-  };
+  project: Project;
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const isOilGas = project.businessLine === "Oil & Gas";
-  const themeColor = isOilGas ? "orange" : "blue";
+  
+  // Get the primary image (first in array) or fallback
+  const primaryImage = project.images[0] || "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop";
   
   return (
-    <Card className={`card-hover animate-on-scroll bg-white shadow-lg border-0 border-t-4 ${
-      isOilGas ? "border-t-orange-500" : "border-t-blue-500"
+    <Card className={`card-hover animate-on-scroll bg-card shadow-lg border-0 border-t-4 ${
+      isOilGas ? "border-t-oil-gas" : "border-t-av-tech"
     }`}>
       <div className="relative">
         <img 
-          src={project.image} 
+          src={primaryImage} 
           alt={project.title}
           className="w-full h-48 object-cover"
         />
         <div className="absolute top-4 right-4">
-          <Badge className={`${isOilGas ? 'bg-orange-600' : 'bg-blue-600'} text-white flex items-center gap-1`}>
+          <Badge className={`${isOilGas ? 'bg-oil-gas' : 'bg-av-tech'} text-white flex items-center gap-1`}>
             {isOilGas ? <Fuel className="h-3 w-3" /> : <Tv className="h-3 w-3" />}
             {project.businessLine}
           </Badge>
         </div>
-        <div className={`absolute bottom-0 left-0 right-0 h-1 ${isOilGas ? 'bg-orange-500' : 'bg-blue-500'}`} />
+        <div className={`absolute bottom-0 left-0 right-0 h-1 ${isOilGas ? 'bg-oil-gas' : 'bg-av-tech'}`} />
       </div>
       
       <CardContent className="p-6">
@@ -50,24 +40,24 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         
         <div className="space-y-3 mb-4">
           <div>
-            <h4 className={`font-roboto font-semibold text-sm mb-1 ${isOilGas ? 'text-orange-700' : 'text-blue-700'}`}>
+            <h4 className={`font-roboto font-semibold text-sm mb-1 ${isOilGas ? 'text-oil-gas-dark' : 'text-av-tech-dark'}`}>
               Challenge:
             </h4>
-            <p className="text-gray-600 text-sm">{project.problem}</p>
+            <p className="text-muted-foreground text-sm">{project.problem}</p>
           </div>
           <div>
-            <h4 className={`font-roboto font-semibold text-sm mb-1 ${isOilGas ? 'text-orange-600' : 'text-blue-600'}`}>
+            <h4 className={`font-roboto font-semibold text-sm mb-1 ${isOilGas ? 'text-oil-gas' : 'text-av-tech'}`}>
               Solution:
             </h4>
-            <p className="text-gray-600 text-sm">{project.solution}</p>
+            <p className="text-muted-foreground text-sm">{project.solution}</p>
           </div>
           <div>
             <h4 className="font-roboto font-semibold text-green-600 text-sm mb-1">Result:</h4>
-            <p className="text-gray-600 text-sm font-medium">{project.result}</p>
+            <p className="text-muted-foreground text-sm font-medium">{project.result}</p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+        <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
           <div className="flex items-center space-x-1">
             <MapPin className="h-3 w-3" />
             <span>{project.client}</span>
@@ -85,8 +75,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               variant="secondary" 
               className={`text-xs ${
                 isOilGas 
-                  ? 'bg-orange-100 text-orange-700 hover:bg-orange-200' 
-                  : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                  ? 'bg-oil-gas-light text-oil-gas-dark hover:bg-oil-gas-light' 
+                  : 'bg-av-tech-light text-av-tech-dark hover:bg-av-tech-light'
               }`}
             >
               {tag}
@@ -96,8 +86,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <Button className={`w-full font-roboto ${
           isOilGas 
-            ? 'bg-orange-600 hover:bg-orange-700 text-white' 
-            : 'bg-blue-600 hover:bg-blue-700 text-white'
+            ? 'bg-oil-gas hover:bg-oil-gas-dark text-white' 
+            : 'bg-av-tech hover:bg-av-tech-dark text-white'
         }`}>
           <Eye className="h-4 w-4 mr-2" />
           View Full Case Study

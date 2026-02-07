@@ -30,20 +30,32 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#01233d',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				accent: {
-					DEFAULT: '#ff7300',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
 				},
-				'deep-navy': '#01233d',
-				'safety-orange': '#ff7300',
-				'light-grey': '#f4f7fa',
+				// Business line semantic colors
+				'oil-gas': {
+					DEFAULT: 'hsl(var(--oil-gas))',
+					light: 'hsl(var(--oil-gas-light))',
+					dark: 'hsl(var(--oil-gas-dark))',
+				},
+				'av-tech': {
+					DEFAULT: 'hsl(var(--av-tech))',
+					light: 'hsl(var(--av-tech-light))',
+					dark: 'hsl(var(--av-tech-dark))',
+				},
+				// Legacy support
+				'deep-navy': 'hsl(var(--primary))',
+				'safety-orange': 'hsl(var(--accent))',
+				'light-grey': 'hsl(var(--muted))',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'

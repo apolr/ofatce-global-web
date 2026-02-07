@@ -1,21 +1,8 @@
-
 import ProjectCard from "./ProjectCard";
+import type { Project } from "@/data/projectsData";
 
 interface ProjectsGridProps {
-  projects: Array<{
-    id: number;
-    title: string;
-    category: string;
-    tags: string[];
-    image: string;
-    problem: string;
-    solution: string;
-    result: string;
-    client: string;
-    duration: string;
-    location: string;
-    businessLine: string;
-  }>;
+  projects: Project[];
 }
 
 const ProjectsGrid = ({ projects }: ProjectsGridProps) => {

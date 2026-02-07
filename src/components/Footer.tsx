@@ -4,13 +4,13 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <img src="/lovable-uploads/c8ae3d42-cb6b-4177-b497-e1f1ac934c2c.png" alt="OFATCE Global Limited" className="h-12 w-auto object-contain" />
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Two specialized business lines under one trusted brand. Delivering excellence in Oil & Gas solutions and Audiovisual & Networking services since 2006.
             </p>
           </div>
@@ -27,7 +27,7 @@ const Footer = () => {
                 { name: "Projects", path: "/projects" }
               ].map(link => (
                 <li key={link.name}>
-                  <Link to={link.path} className="text-gray-300 hover:text-accent transition-colors text-sm">
+                  <Link to={link.path} className="text-primary-foreground/70 hover:text-accent transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -41,10 +41,10 @@ const Footer = () => {
             <div className="space-y-4">
               <Link to="/oil-gas" className="block group">
                 <div className="flex items-center mb-1">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                  <h5 className="text-sm font-medium text-orange-400 group-hover:text-orange-300 transition-colors">Oil & Gas Solutions</h5>
+                  <span className="w-2 h-2 bg-oil-gas rounded-full mr-2"></span>
+                  <h5 className="text-sm font-medium text-oil-gas group-hover:text-oil-gas-light transition-colors">Oil & Gas Solutions</h5>
                 </div>
-                <ul className="space-y-1 text-xs text-gray-300 ml-4">
+                <ul className="space-y-1 text-xs text-primary-foreground/60 ml-4">
                   <li>Exploration & Production Support</li>
                   <li>Infrastructure & Project Management</li>
                   <li>Maintenance & Operational Safety</li>
@@ -52,10 +52,10 @@ const Footer = () => {
               </Link>
               <Link to="/audiovisual-networking" className="block group">
                 <div className="flex items-center mb-1">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                  <h5 className="text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">Audiovisual & Networking</h5>
+                  <span className="w-2 h-2 bg-av-tech rounded-full mr-2"></span>
+                  <h5 className="text-sm font-medium text-av-tech group-hover:text-av-tech-light transition-colors">Audiovisual & Networking</h5>
                 </div>
-                <ul className="space-y-1 text-xs text-gray-300 ml-4">
+                <ul className="space-y-1 text-xs text-primary-foreground/60 ml-4">
                   <li>Audio-Visual Systems</li>
                   <li>Computer Networking & Cabling</li>
                   <li>Video Conferencing</li>
@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">
+                <p className="text-primary-foreground/70 text-sm">
                   #37 Etitinwo Street, off Elekahia Road<br />
                   Port Harcourt, Rivers State, Nigeria<br />
                   <br />
@@ -80,30 +80,30 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <div className="text-gray-300 text-sm">
+                <div className="text-primary-foreground/70 text-sm">
                   <p>+234 802 863 6198</p>
                   <p>+234 805 349 4883</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <div className="text-gray-300 text-sm">
+                <div className="text-primary-foreground/70 text-sm">
                   <p>info@ofatceglobal.com</p>
                   <p>ofatceglobal@yahoo.co.uk</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-accent flex-shrink-0" />
-                <p className="text-gray-300 text-sm">Mon-Fri: 8:00 AM - 5:00 PM</p>
+                <p className="text-primary-foreground/70 text-sm">Mon-Fri: 8:00 AM - 5:00 PM</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-300 text-sm">© 2025 OFATCE Global Limited. All rights reserved.</p>
-            <div className="flex items-center space-x-6 text-sm text-gray-300">
+            <p className="text-primary-foreground/70 text-sm">© 2025 OFATCE Global Limited. All rights reserved.</p>
+            <div className="flex items-center space-x-6 text-sm text-primary-foreground/70">
               <span>19+ Years Experience</span>
               <span>Two Specialized Business Lines</span>
               <span>Nigerian Local Content</span>
