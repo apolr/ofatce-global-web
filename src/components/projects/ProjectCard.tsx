@@ -10,17 +10,16 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const isOilGas = project.businessLine === "Oil & Gas";
-  
+
   // Get the primary image (first in array) or fallback
   const primaryImage = project.images[0] || "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop";
-  
+
   return (
-    <Card className={`card-hover animate-on-scroll bg-card shadow-lg border-0 border-t-4 ${
-      isOilGas ? "border-t-oil-gas" : "border-t-av-tech"
-    }`}>
+    <Card className={`card-hover bg-card shadow-lg border-0 border-t-4 ${isOilGas ? "border-t-oil-gas" : "border-t-av-tech"
+      }`}>
       <div className="relative">
-        <img 
-          src={primaryImage} 
+        <img
+          src={primaryImage}
           alt={project.title}
           className="w-full h-48 object-cover"
         />
@@ -32,12 +31,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         <div className={`absolute bottom-0 left-0 right-0 h-1 ${isOilGas ? 'bg-oil-gas' : 'bg-av-tech'}`} />
       </div>
-      
+
       <CardContent className="p-6">
         <h3 className="text-xl font-poppins font-semibold text-primary mb-4">
           {project.title}
         </h3>
-        
+
         <div className="space-y-3 mb-4">
           <div>
             <h4 className={`font-roboto font-semibold text-sm mb-1 ${isOilGas ? 'text-oil-gas-dark' : 'text-av-tech-dark'}`}>
@@ -70,25 +69,23 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <div className="flex flex-wrap gap-1 mb-4">
           {project.tags.map((tag, tagIndex) => (
-            <Badge 
-              key={tagIndex} 
-              variant="secondary" 
-              className={`text-xs ${
-                isOilGas 
-                  ? 'bg-oil-gas-light text-oil-gas-dark hover:bg-oil-gas-light' 
+            <Badge
+              key={tagIndex}
+              variant="secondary"
+              className={`text-xs ${isOilGas
+                  ? 'bg-oil-gas-light text-oil-gas-dark hover:bg-oil-gas-light'
                   : 'bg-av-tech-light text-av-tech-dark hover:bg-av-tech-light'
-              }`}
+                }`}
             >
               {tag}
             </Badge>
           ))}
         </div>
 
-        <Button className={`w-full font-roboto ${
-          isOilGas 
-            ? 'bg-oil-gas hover:bg-oil-gas-dark text-white' 
+        <Button className={`w-full font-roboto ${isOilGas
+            ? 'bg-oil-gas hover:bg-oil-gas-dark text-white'
             : 'bg-av-tech hover:bg-av-tech-dark text-white'
-        }`}>
+          }`}>
           <Eye className="h-4 w-4 mr-2" />
           View Full Case Study
         </Button>

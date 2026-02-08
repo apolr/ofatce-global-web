@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="pt-20 py-0">
+    <div className="py-0">
       {/* Hero Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
@@ -49,7 +49,7 @@ const Contact = () => {
                           #37 Etitinwo Street, off Elekahia Road<br />
                           Port Harcourt, Rivers State<br />
                           Nigeria<br /><br />
-                          
+
                           105, Igi Olugbin Street<br />
                           Palmgrove, Lagos <br />
                           Nigeria<br />
@@ -58,7 +58,7 @@ const Contact = () => {
                     </div>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card shadow-lg border-0">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
@@ -83,7 +83,7 @@ const Contact = () => {
                     </div>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card shadow-lg border-0">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
@@ -146,14 +146,14 @@ const Contact = () => {
               <div className="animate-on-scroll">
                 <Card className="bg-card shadow-lg border-0 overflow-hidden">
                   <div className="h-80 bg-muted relative">
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.4!2d7.0!3d4.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDgnMDAuMCJOIDfCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890" 
-                      width="100%" 
-                      height="100%" 
-                      style={{ border: 0 }} 
-                      allowFullScreen={true} 
-                      loading="lazy" 
-                      referrerPolicy="no-referrer-when-downgrade" 
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.4!2d7.0!3d4.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDgnMDAuMCJOIDfCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
                       title="OFATCE Global Limited Office Location"
                     ></iframe>
                   </div>

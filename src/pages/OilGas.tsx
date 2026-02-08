@@ -63,7 +63,7 @@ const OilGas = () => {
   const oilGasProjects = portfolioItems.filter(item => item.businessLine === "Oil & Gas").slice(0, 3);
 
   return (
-    <div className="pt-20 py-0">
+    <div className="py-0">
       {/* Hero Section - Oil & Gas themed */}
       <section className="py-20 bg-oil-gas-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -186,8 +186,8 @@ const OilGas = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {oilGasProjects.map((project) => (
                 <Card key={project.id} className="animate-on-scroll bg-card shadow-lg border-0 border-t-4 border-t-oil-gas">
-                  <img 
-                    src={project.images[0]} 
+                  <img
+                    src={project.images[0]}
                     alt={project.title}
                     className="w-full h-48 object-cover"
                   />
@@ -309,7 +309,7 @@ const OilGas = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card className="bg-white/10 backdrop-blur border-0 animate-on-scroll">
                 <CardContent className="p-6 flex items-start space-x-4">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">

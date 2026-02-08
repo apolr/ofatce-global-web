@@ -26,14 +26,14 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')`
-          }} 
+          }}
         />
         <div className="absolute inset-0 hero-overlay" />
-        
+
         <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto animate-on-scroll">
           <h1 className="text-responsive-5xl font-poppins font-bold mb-6 leading-tight">
             Two Specialized Business Lines.<br />One Trusted Partner.
@@ -49,7 +49,7 @@ const Home = () => {
               </Button>
             </a>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-roboto font-medium px-8 py-3 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-white bg-black/20 backdrop-blur-sm hover:bg-white hover:text-primary font-roboto font-medium px-8 py-3 text-lg">
                 Get in Touch
               </Button>
             </Link>
@@ -68,15 +68,15 @@ const Home = () => {
               We offer two specialized areas of expertise. Select the one that matches your needs to explore our dedicated solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Oil & Gas Card */}
             <Card className="card-hover animate-on-scroll bg-card shadow-xl border-0 overflow-hidden group relative">
               <div className="absolute top-0 left-0 right-0 h-2 bg-oil-gas"></div>
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=300&fit=crop" 
-                  alt="Oil & Gas Solutions" 
+                <img
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=300&fit=crop"
+                  alt="Oil & Gas Solutions"
                   className="w-full h-56 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-oil-gas-dark/80 to-oil-gas/20" />
@@ -91,12 +91,12 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              
+
               <CardContent className="p-8">
                 <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
                   Comprehensive services for exploration, production, infrastructure management, and operational safety in the energy sector.
                 </p>
-                
+
                 <div className="mb-8">
                   <h4 className="font-roboto font-semibold text-oil-gas-dark mb-3">Key Services:</h4>
                   <ul className="text-muted-foreground space-y-2">
@@ -108,7 +108,7 @@ const Home = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <Link to="/oil-gas">
                   <Button className="w-full bg-oil-gas hover:bg-oil-gas-dark text-white font-roboto text-lg py-6">
                     Explore Oil & Gas
@@ -122,9 +122,9 @@ const Home = () => {
             <Card className="card-hover animate-on-scroll bg-card shadow-xl border-0 overflow-hidden group relative">
               <div className="absolute top-0 left-0 right-0 h-2 bg-av-tech"></div>
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=300&fit=crop" 
-                  alt="Audiovisual & Networking" 
+                <img
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=300&fit=crop"
+                  alt="Audiovisual & Networking"
                   className="w-full h-56 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-av-tech-dark/80 to-av-tech/20" />
@@ -139,12 +139,12 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              
+
               <CardContent className="p-8">
                 <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
                   Complete AV systems, enterprise networking, structured cabling, and technology solutions for modern organizations.
                 </p>
-                
+
                 <div className="mb-8">
                   <h4 className="font-roboto font-semibold text-av-tech-dark mb-3">Key Services:</h4>
                   <ul className="text-muted-foreground space-y-2">
@@ -156,7 +156,7 @@ const Home = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <Link to="/audiovisual-networking">
                   <Button className="w-full bg-av-tech hover:bg-av-tech-dark text-white font-roboto text-lg py-6">
                     Explore AV & Networking
@@ -214,7 +214,7 @@ const Home = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-roboto font-medium px-8 py-3 text-lg">
+              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground bg-black/20 backdrop-blur-sm hover:bg-primary-foreground hover:text-primary font-roboto font-medium px-8 py-3 text-lg">
                 Contact Us Today
               </Button>
             </Link>

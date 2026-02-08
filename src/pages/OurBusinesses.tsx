@@ -50,7 +50,7 @@ const OurBusinesses = () => {
   ];
 
   return (
-    <div className="pt-20 py-0">
+    <div className="py-0">
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4">
@@ -80,26 +80,23 @@ const OurBusinesses = () => {
           <div className="space-y-16">
             {businessLines.map((business, index) => (
               <div key={business.id} className="animate-on-scroll">
-                <Card className={`overflow-hidden shadow-lg border-0 border-t-4 ${
-                  business.theme === "oil-gas" ? "border-t-oil-gas" : "border-t-av-tech"
-                }`}>
+                <Card className={`overflow-hidden shadow-lg border-0 border-t-4 ${business.theme === "oil-gas" ? "border-t-oil-gas" : "border-t-av-tech"
+                  }`}>
                   <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                     <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                       <img src={business.image} alt={business.title} className="w-full h-full object-cover min-h-[400px]" />
-                      <div className={`absolute inset-0 ${
-                        business.theme === "oil-gas" 
-                          ? "bg-gradient-to-t from-oil-gas-dark/60 to-transparent" 
+                      <div className={`absolute inset-0 ${business.theme === "oil-gas"
+                          ? "bg-gradient-to-t from-oil-gas-dark/60 to-transparent"
                           : "bg-gradient-to-t from-av-tech-dark/60 to-transparent"
-                      }`} />
+                        }`} />
                       <div className="absolute bottom-6 left-6">
-                        <div className={`w-14 h-14 rounded-full flex items-center justify-center ${
-                          business.theme === "oil-gas" ? "bg-oil-gas" : "bg-av-tech"
-                        }`}>
+                        <div className={`w-14 h-14 rounded-full flex items-center justify-center ${business.theme === "oil-gas" ? "bg-oil-gas" : "bg-av-tech"
+                          }`}>
                           <business.icon className="h-7 w-7 text-white" />
                         </div>
                       </div>
                     </div>
-                    
+
                     <CardContent className="p-8 flex flex-col justify-center">
                       <h3 className="text-3xl font-poppins font-bold text-primary mb-4">
                         {business.title}
@@ -107,41 +104,38 @@ const OurBusinesses = () => {
                       <p className="text-muted-foreground mb-6 leading-relaxed">
                         {business.description}
                       </p>
-                      
+
                       <div className="mb-6">
                         <h4 className="font-roboto font-semibold text-primary mb-4">Core Services:</h4>
                         <div className="grid grid-cols-1 gap-3">
                           {business.services.map((service, idx) => (
                             <div key={idx} className="flex items-center">
-                              <service.icon className={`h-5 w-5 mr-3 ${
-                                business.theme === "oil-gas" ? "text-oil-gas" : "text-av-tech"
-                              }`} />
+                              <service.icon className={`h-5 w-5 mr-3 ${business.theme === "oil-gas" ? "text-oil-gas" : "text-av-tech"
+                                }`} />
                               <span className="text-sm text-muted-foreground">{service.name}</span>
                             </div>
                           ))}
                         </div>
                       </div>
-                      
+
                       <div className="mb-6">
                         <h4 className="font-roboto font-semibold text-primary mb-3">Key Highlights:</h4>
                         <ul className="space-y-2">
                           {business.highlights.map((highlight, idx) => (
                             <li key={idx} className="flex items-start">
-                              <div className={`w-2 h-2 rounded-full mr-3 mt-2 flex-shrink-0 ${
-                                business.theme === "oil-gas" ? "bg-oil-gas" : "bg-av-tech"
-                              }`}></div>
+                              <div className={`w-2 h-2 rounded-full mr-3 mt-2 flex-shrink-0 ${business.theme === "oil-gas" ? "bg-oil-gas" : "bg-av-tech"
+                                }`}></div>
                               <span className="text-sm text-muted-foreground">{highlight}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <Link to={business.link}>
-                        <Button className={`font-roboto font-medium px-6 py-3 ${
-                          business.theme === "oil-gas" 
-                            ? "bg-oil-gas hover:bg-oil-gas-dark text-white" 
+                        <Button className={`font-roboto font-medium px-6 py-3 ${business.theme === "oil-gas"
+                            ? "bg-oil-gas hover:bg-oil-gas-dark text-white"
                             : "bg-av-tech hover:bg-av-tech-dark text-white"
-                        }`}>
+                          }`}>
                           Learn More About {business.title}
                           <ArrowRight className="h-4 w-4 ml-2" />
                         </Button>

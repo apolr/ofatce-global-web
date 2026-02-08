@@ -54,7 +54,7 @@ const AudiovisualNetworking = () => {
   const avProjects = portfolioItems.filter(item => item.businessLine === "Audiovisual & Networking").slice(0, 4);
 
   return (
-    <div className="pt-20 py-0">
+    <div className="py-0">
       {/* Hero Section - AV/Tech themed */}
       <section className="py-20 bg-av-tech-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -259,7 +259,7 @@ const AudiovisualNetworking = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card className="bg-white/10 backdrop-blur border-0 animate-on-scroll">
                 <CardContent className="p-6 flex items-start space-x-4">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">

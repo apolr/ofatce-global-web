@@ -54,7 +54,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="pt-20 py-0">
+    <div className="py-0">
       {/* Hero Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
@@ -74,10 +74,10 @@ const AboutUs = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll">
-              <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop" 
-                alt="OFATCE team at work" 
-                className="rounded-lg shadow-lg w-full h-auto object-cover" 
+              <img
+                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
+                alt="OFATCE team at work"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
               />
             </div>
             <div className="animate-on-scroll">

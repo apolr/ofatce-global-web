@@ -8,10 +8,10 @@ import { portfolioItems, filters, type FilterType } from "@/data/projectsData";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>("All");
-  
+
   const filteredItems = useMemo(() => {
-    return activeFilter === "All" 
-      ? portfolioItems 
+    return activeFilter === "All"
+      ? portfolioItems
       : portfolioItems.filter(item => item.businessLine === activeFilter);
   }, [activeFilter]);
 
@@ -25,12 +25,12 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="pt-20 py-0">
+    <div className="py-0">
       <ProjectsHero />
-      <ProjectsFilter 
-        filters={[...filters]} 
-        activeFilter={activeFilter} 
-        onFilterChange={(filter) => setActiveFilter(filter as FilterType)} 
+      <ProjectsFilter
+        filters={[...filters]}
+        activeFilter={activeFilter}
+        onFilterChange={(filter) => setActiveFilter(filter as FilterType)}
         filteredCount={filteredItems.length}
         projectCounts={projectCounts}
       />
