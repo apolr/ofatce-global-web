@@ -131,12 +131,12 @@ export const portfolioItems: Project[] = [
     businessLine: "Oil & Gas",
     tags: ["Assembly", "Installation", "Subsea"],
     images: [
+      "/projects/mudmat-assembly/Picture6.jpg",
       "/projects/mudmat-assembly/Picture1.jpg",
       "/projects/mudmat-assembly/Picture2.jpg",
       "/projects/mudmat-assembly/Picture3.jpg",
       "/projects/mudmat-assembly/Picture4.jpg",
       "/projects/mudmat-assembly/Picture5.jpg",
-      "/projects/mudmat-assembly/Picture6.jpg",
       "/projects/mudmat-assembly/Picture7.jpg"
     ],
     problem: "Subsea operations required the assembly and installation of stable mudmats for equipment support.",
