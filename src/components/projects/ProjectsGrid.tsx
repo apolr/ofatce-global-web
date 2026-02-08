@@ -169,47 +169,49 @@ const ProjectsGrid = ({ projects }: ProjectsGridProps) => {
       </Dialog>
 
       {/* Lightbox Overlay */}
-      {selectedProject && lightboxIndex !== null && (
-        <div
-          className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center backdrop-blur-sm"
-          onClick={() => setLightboxIndex(null)}
-        >
-          <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300 z-[70] p-2"
-            onClick={() => setLightboxIndex(null)}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
+      {/* Lightbox Dialog */}
+      <Dialog open={!!selectedProject && lightboxIndex !== null} onOpenChange={(open) => !open && setLightboxIndex(null)}>
+        <DialogContent className="max-w-[100vw] h-[100vh] p-0 border-none bg-black/95 backdrop-blur-sm [&>button]:hidden">
+          {selectedProject && lightboxIndex !== null && (
+            <div className="relative w-full h-full flex items-center justify-center">
+              <button
+                className="absolute top-4 right-4 text-white hover:text-gray-300 z-[70] p-2"
+                onClick={() => setLightboxIndex(null)}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
 
-          <button
-            className="absolute left-4 text-white hover:text-gray-300 z-[70] p-4 bg-black/50 rounded-full transition-colors"
-            onClick={handlePrevImage}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
+              <button
+                className="absolute left-4 text-white hover:text-gray-300 z-[70] p-4 bg-black/50 rounded-full transition-colors"
+                onClick={handlePrevImage}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
 
-          <div
-            className="relative max-w-[90vw] max-h-[90vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={selectedProject.images[lightboxIndex]}
-              alt={`${selectedProject.title} - View ${lightboxIndex + 1}`}
-              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-            />
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/50 px-4 py-2 rounded-full text-sm">
-              {lightboxIndex + 1} / {selectedProject.images.length}
+              <div
+                className="relative max-w-[90vw] max-h-[90vh]"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img
+                  src={selectedProject.images[lightboxIndex]}
+                  alt={`${selectedProject.title} - View ${lightboxIndex + 1}`}
+                  className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                />
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/50 px-4 py-2 rounded-full text-sm">
+                  {lightboxIndex + 1} / {selectedProject.images.length}
+                </div>
+              </div>
+
+              <button
+                className="absolute right-4 text-white hover:text-gray-300 z-[70] p-4 bg-black/50 rounded-full transition-colors"
+                onClick={handleNextImage}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
             </div>
-          </div>
-
-          <button
-            className="absolute right-4 text-white hover:text-gray-300 z-[70] p-4 bg-black/50 rounded-full transition-colors"
-            onClick={handleNextImage}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-      )}
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

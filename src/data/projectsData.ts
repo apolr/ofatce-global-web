@@ -53,19 +53,7 @@ export const portfolioItems: Project[] = [
     duration: "2 months",
     location: "Lagos, Nigeria"
   },
-  {
-    id: 3,
-    title: "TotalEnergies Critical Operations Support",
-    businessLine: "Oil & Gas",
-    tags: ["Oil & Gas", "Operations Support", "Energy Technology"],
-    images: ["https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop"],
-    problem: "TotalEnergies E&P Nigeria required specialized technology services to support critical oil & gas operations and ensure operational continuity.",
-    solution: "Provided comprehensive technology solutions through our partnership with Southgate Technologies, including monitoring systems and operational support infrastructure.",
-    result: "Delivered reliable technology support enabling continuous operations and enhanced safety protocols in critical energy sector operations.",
-    client: "TotalEnergies E&P Nigeria",
-    duration: "6 months",
-    location: "Lagos, Nigeria"
-  },
+
   {
     id: 4,
     title: "Ministry of Defense Secure Networks",
@@ -92,19 +80,7 @@ export const portfolioItems: Project[] = [
     duration: "8 months",
     location: "Multiple locations across Nigeria"
   },
-  {
-    id: 6,
-    title: "Oil & Gas Infrastructure Development",
-    businessLine: "Oil & Gas",
-    tags: ["Infrastructure", "Project Management", "Safety"],
-    images: ["https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop"],
-    problem: "Major oil & gas companies required end-to-end infrastructure development and project management to ensure operational excellence and safety compliance.",
-    solution: "Provided comprehensive project management services including infrastructure design, implementation oversight, and safety protocol integration throughout the project lifecycle.",
-    result: "Successfully delivered multiple infrastructure projects on time and within budget, achieving 100% safety compliance and operational readiness.",
-    client: "Major Oil & Gas Companies",
-    duration: "12 months",
-    location: "Various offshore and onshore locations"
-  },
+
   {
     id: 7,
     title: "FABRICATION AND INSTALLATION OF MQC FRAME FOR TOTALENERGIES DW",
@@ -169,6 +145,32 @@ export const portfolioItems: Project[] = [
     client: "Oil & Gas Client",
     duration: "Project Duration",
     location: "Offshore"
+  },
+  {
+    id: 3,
+    title: "TotalEnergies Critical Operations Support",
+    businessLine: "Oil & Gas",
+    tags: ["Oil & Gas", "Operations Support", "Energy Technology"],
+    images: ["https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop"],
+    problem: "TotalEnergies E&P Nigeria required specialized technology services to support critical oil & gas operations and ensure operational continuity.",
+    solution: "Provided comprehensive technology solutions through our partnership with Southgate Technologies, including monitoring systems and operational support infrastructure.",
+    result: "Delivered reliable technology support enabling continuous operations and enhanced safety protocols in critical energy sector operations.",
+    client: "TotalEnergies E&P Nigeria",
+    duration: "6 months",
+    location: "Lagos, Nigeria"
+  },
+  {
+    id: 6,
+    title: "Oil & Gas Infrastructure Development",
+    businessLine: "Oil & Gas",
+    tags: ["Infrastructure", "Project Management", "Safety"],
+    images: ["https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop"],
+    problem: "Major oil & gas companies required end-to-end infrastructure development and project management to ensure operational excellence and safety compliance.",
+    solution: "Provided comprehensive project management services including infrastructure design, implementation oversight, and safety protocol integration throughout the project lifecycle.",
+    result: "Successfully delivered multiple infrastructure projects on time and within budget, achieving 100% safety compliance and operational readiness.",
+    client: "Major Oil & Gas Companies",
+    duration: "12 months",
+    location: "Various offshore and onshore locations"
   }
 ];
 
