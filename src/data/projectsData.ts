@@ -104,6 +104,71 @@ export const portfolioItems: Project[] = [
     client: "Major Oil & Gas Companies",
     duration: "12 months",
     location: "Various offshore and onshore locations"
+  },
+  {
+    id: 7,
+    title: "FABRICATION AND INSTALLATION OF MQC FRAME FOR TOTALENERGIES DW",
+    businessLine: "Oil & Gas",
+    tags: ["Fabrication", "Installation", "Offshore"],
+    images: [
+      "/projects/fabrication-mqc-frame/Picture1.jpg",
+      "/projects/fabrication-mqc-frame/Picture2.jpg",
+      "/projects/fabrication-mqc-frame/Picture3.jpg",
+      "/projects/fabrication-mqc-frame/Picture4.jpg",
+      "/projects/fabrication-mqc-frame/Picture5.jpg",
+      "/projects/fabrication-mqc-frame/Picture6.jpg",
+      "/projects/fabrication-mqc-frame/Picture7.jpg",
+      "/projects/fabrication-mqc-frame/Picture8.jpg",
+      "/projects/fabrication-mqc-frame/Picture9.jpg",
+      "/projects/fabrication-mqc-frame/Picture10.jpg",
+      "/projects/fabrication-mqc-frame/Picture11.jpg"
+    ],
+    problem: "TotalEnergies required high-precision fabrication and installation of MQC frames for deepwater operations.",
+    solution: "Executed precise fabrication and expert installation of the MQC frames, ensuring adherence to strict engineering standards.",
+    result: "Delivered robust MQC frames that met all technical specifications and operational requirements.",
+    client: "TotalEnergies",
+    duration: "Project Duration",
+    location: "Offshore"
+  },
+  {
+    id: 8,
+    title: "MAINTENANCE AND REPAINTING OF SSW REEL FOR TOTALENERGIES DW",
+    businessLine: "Oil & Gas",
+    tags: ["Maintenance", "Refurbishment", "Deepwater"],
+    images: [
+      "/projects/maintenance-ssw-reel/Picture1.jpg",
+      "/projects/maintenance-ssw-reel/Picture2.jpg",
+      "/projects/maintenance-ssw-reel/Picture3.jpg",
+      "/projects/maintenance-ssw-reel/Picture4.jpg",
+      "/projects/maintenance-ssw-reel/Picture5.jpg"
+    ],
+    problem: "The SSW reel required critical maintenance and repainting to extend its operational lifespan and prevent corrosion.",
+    solution: "Performed comprehensive maintenance and applied specialized protective coatings to the SSW reel.",
+    result: "significantly extended the asset's life and improved its resistance to the harsh marine environment.",
+    client: "TotalEnergies",
+    duration: "Project Duration",
+    location: "Offshore"
+  },
+  {
+    id: 9,
+    title: "MUDMAT ASSEMBLING AND INSTALLATION",
+    businessLine: "Oil & Gas",
+    tags: ["Assembly", "Installation", "Subsea"],
+    images: [
+      "/projects/mudmat-assembly/Picture1.jpg",
+      "/projects/mudmat-assembly/Picture2.jpg",
+      "/projects/mudmat-assembly/Picture3.jpg",
+      "/projects/mudmat-assembly/Picture4.jpg",
+      "/projects/mudmat-assembly/Picture5.jpg",
+      "/projects/mudmat-assembly/Picture6.jpg",
+      "/projects/mudmat-assembly/Picture7.jpg"
+    ],
+    problem: "Subsea operations required the assembly and installation of stable mudmats for equipment support.",
+    solution: "Carried out the expert assembly and precise subsea installation of mudmats.",
+    result: "Provided a stable and reliable foundation for subsea equipment deployment.",
+    client: "Oil & Gas Client",
+    duration: "Project Duration",
+    location: "Offshore"
   }
 ];
 

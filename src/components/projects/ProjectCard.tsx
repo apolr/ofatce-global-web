@@ -6,9 +6,10 @@ import type { Project } from "@/data/projectsData";
 
 interface ProjectCardProps {
   project: Project;
+  onSelect: (project: Project) => void;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
   const isOilGas = project.businessLine === "Oil & Gas";
 
   // Get the primary image (first in array) or fallback
@@ -21,7 +22,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <img
           src={primaryImage}
           alt={project.title}
-          className="w-full h-48 object-cover"
+          className="w-full h-48 object-cover cursor-pointer"
+          onClick={() => onSelect(project)}
         />
         <div className="absolute top-4 right-4">
           <Badge className={`${isOilGas ? 'bg-oil-gas' : 'bg-av-tech'} text-white flex items-center gap-1`}>
@@ -42,17 +44,17 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <h4 className={`font-roboto font-semibold text-sm mb-1 ${isOilGas ? 'text-oil-gas-dark' : 'text-av-tech-dark'}`}>
               Challenge:
             </h4>
-            <p className="text-muted-foreground text-sm">{project.problem}</p>
+            <p className="text-muted-foreground text-sm line-clamp-2">{project.problem}</p>
           </div>
           <div>
             <h4 className={`font-roboto font-semibold text-sm mb-1 ${isOilGas ? 'text-oil-gas' : 'text-av-tech'}`}>
               Solution:
             </h4>
-            <p className="text-muted-foreground text-sm">{project.solution}</p>
+            <p className="text-muted-foreground text-sm line-clamp-2">{project.solution}</p>
           </div>
           <div>
             <h4 className="font-roboto font-semibold text-green-600 text-sm mb-1">Result:</h4>
-            <p className="text-muted-foreground text-sm font-medium">{project.result}</p>
+            <p className="text-muted-foreground text-sm font-medium line-clamp-2">{project.result}</p>
           </div>
         </div>
 
@@ -73,8 +75,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               key={tagIndex}
               variant="secondary"
               className={`text-xs ${isOilGas
-                  ? 'bg-oil-gas-light text-oil-gas-dark hover:bg-oil-gas-light'
-                  : 'bg-av-tech-light text-av-tech-dark hover:bg-av-tech-light'
+                ? 'bg-oil-gas-light text-oil-gas-dark hover:bg-oil-gas-light'
+                : 'bg-av-tech-light text-av-tech-dark hover:bg-av-tech-light'
                 }`}
             >
               {tag}
@@ -82,10 +84,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           ))}
         </div>
 
-        <Button className={`w-full font-roboto ${isOilGas
+        <Button
+          className={`w-full font-roboto ${isOilGas
             ? 'bg-oil-gas hover:bg-oil-gas-dark text-white'
             : 'bg-av-tech hover:bg-av-tech-dark text-white'
-          }`}>
+            }`}
+          onClick={() => onSelect(project)}
+        >
           <Eye className="h-4 w-4 mr-2" />
           View Full Case Study
         </Button>
