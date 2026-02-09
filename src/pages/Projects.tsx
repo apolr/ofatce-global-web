@@ -10,9 +10,19 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>("All");
 
   const filteredItems = useMemo(() => {
-    return activeFilter === "All"
+    const items = activeFilter === "All"
       ? portfolioItems
       : portfolioItems.filter(item => item.businessLine === activeFilter);
+
+    // Sort items: local images (starting with /) first, then remote images
+    return [...items].sort((a, b) => {
+      const aIsLocal = a.images[0]?.startsWith('/');
+      const bIsLocal = b.images[0]?.startsWith('/');
+
+      if (aIsLocal && !bIsLocal) return -1;
+      if (!aIsLocal && bIsLocal) return 1;
+      return 0;
+    });
   }, [activeFilter]);
 
   // Calculate project counts for each filter

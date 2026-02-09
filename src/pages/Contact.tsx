@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
@@ -110,34 +110,7 @@ const Contact = () => {
                 </Card>
               </div>
 
-              {/* Business Lines Contact */}
-              <div className="animate-on-scroll">
-                <h3 className="text-xl font-poppins font-semibold text-primary mb-4">
-                  Business Line Inquiries
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Card className="bg-oil-gas-light border-oil-gas/20">
-                    <CardContent className="p-4">
-                      <h4 className="font-roboto font-semibold text-oil-gas-dark mb-2">
-                        Oil & Gas Solutions
-                      </h4>
-                      <p className="text-sm text-oil-gas-dark/80">
-                        For oil & gas services and infrastructure projects
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card className="bg-av-tech-light border-av-tech/20">
-                    <CardContent className="p-4">
-                      <h4 className="font-roboto font-semibold text-av-tech-dark mb-2">
-                        Audiovisual & Networking
-                      </h4>
-                      <p className="text-sm text-av-tech-dark/80">
-                        For AV systems, networking, and technology solutions
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+
             </div>
 
             {/* Map and Additional Info */}
@@ -200,51 +173,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Additional Information */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-on-scroll">
-            <h2 className="text-2xl font-poppins font-bold text-primary mb-6">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Whether you need oil & gas solutions or audiovisual & networking services, our experienced team is ready to help you achieve your goals. Contact us today to discuss your project requirements.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="bg-card shadow-lg border-0">
-                <CardContent className="p-6 text-center">
-                  <h3 className="font-poppins font-semibold text-primary mb-3">
-                    Oil & Gas Projects
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Exploration, production, infrastructure, and specialized industry services
-                  </p>
-                  <Link to="/oil-gas">
-                    <Button className="bg-oil-gas hover:bg-oil-gas-dark text-white font-roboto">
-                      Learn More
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-              <Card className="bg-card shadow-lg border-0">
-                <CardContent className="p-6 text-center">
-                  <h3 className="font-poppins font-semibold text-primary mb-3">
-                    Audiovisual & Networking Projects
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Technology solutions, AV systems, enterprise networking, and automation
-                  </p>
-                  <Link to="/audiovisual-networking">
-                    <Button className="bg-av-tech hover:bg-av-tech-dark text-white font-roboto">
-                      Learn More
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };
