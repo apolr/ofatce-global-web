@@ -2,6 +2,60 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Users, Award, TrendingUp, Fuel, Tv } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const homeJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "OFATCE Global Limited",
+    url: "https://ofatce-global-web.lovable.app",
+    logo: "https://ofatce-global-web.lovable.app/lovable-uploads/83ac60f5-dae5-4126-90cc-4e8bc6dc14e9.png",
+    image: "https://ofatce-global-web.lovable.app/lovable-uploads/83ac60f5-dae5-4126-90cc-4e8bc6dc14e9.png",
+    description:
+      "OFATCE Global Limited delivers specialized Oil & Gas services and Audiovisual & Networking solutions across Nigeria since 2006.",
+    telephone: "+234-802-863-6198",
+    email: "info@ofatceglobal.com",
+    foundingDate: "2006",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "#11 Trans Woji road",
+      addressLocality: "Port Harcourt",
+      addressRegion: "Rivers State",
+      addressCountry: "NG",
+    },
+    areaServed: "NG",
+    knowsAbout: [
+      "Oil and Gas Services",
+      "Exploration & Production Support",
+      "Audiovisual Systems",
+      "Enterprise Networking",
+      "Structured Cabling",
+      "Video Conferencing",
+      "Security Operations Center",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Business Lines",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Oil & Gas Solutions" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Audiovisual & Networking Solutions" },
+        },
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "OFATCE Global Limited",
+    url: "https://ofatce-global-web.lovable.app",
+  },
+];
 
 const Home = () => {
   const quickStats = [
@@ -24,6 +78,12 @@ const Home = () => {
 
   return (
     <div>
+      <SEO
+        title="OFATCE Global Limited | Oil & Gas, Audiovisual & Networking in Nigeria"
+        description="Trusted Nigerian engineering partner since 2006 — specialized Oil & Gas services and Audiovisual & Networking solutions delivered across two focused business lines."
+        path="/"
+        jsonLd={homeJsonLd}
+      />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div
