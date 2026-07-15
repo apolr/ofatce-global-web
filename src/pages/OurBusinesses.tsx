@@ -61,6 +61,12 @@ const OurBusinesses = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="Our Businesses | Oil & Gas and Audiovisual & Networking | OFATCE"
+        description="Explore OFATCE Global's two specialized business lines: Oil & Gas Solutions and Audiovisual & Networking Solutions — one trusted engineering partner in Nigeria."
+        path="/our-businesses"
+        jsonLd={breadcrumb}
+      />
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4">

@@ -65,6 +65,12 @@ const AboutUs = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="About OFATCE Global Limited | Nigerian Engineering Firm Since 2006"
+        description="Founded in 2006, OFATCE Global Limited is a Nigerian engineering firm delivering Oil & Gas services and Audiovisual & Networking solutions. Learn our history, vision, mission, and values."
+        path="/about-us"
+        jsonLd={breadcrumb}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">

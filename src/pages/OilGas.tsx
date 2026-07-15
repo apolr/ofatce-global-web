@@ -86,6 +86,12 @@ const OilGas = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="Oil & Gas Solutions in Nigeria | Exploration, Infrastructure, Safety | OFATCE"
+        description="OFATCE Global delivers specialized Oil & Gas services across Nigeria: exploration & production support, infrastructure & project management, maintenance, safety, and IoT integration."
+        path="/oil-gas"
+        jsonLd={oilGasJsonLd}
+      />
       {/* Hero Section - Oil & Gas themed */}
       <section className="py-20 bg-oil-gas-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

@@ -16,6 +16,12 @@ const contactBreadcrumb = {
 const Contact = () => {
   return (
     <div className="py-0">
+      <SEO
+        title="Contact OFATCE Global Limited | Port Harcourt & Lagos, Nigeria"
+        description="Contact OFATCE Global Limited — offices in Port Harcourt and Lagos. Call +234 802 863 6198 or email info@ofatceglobal.com to discuss your Oil & Gas or AV/Networking project."
+        path="/contact"
+        jsonLd={contactBreadcrumb}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">

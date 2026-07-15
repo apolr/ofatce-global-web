@@ -77,6 +77,12 @@ const AudiovisualNetworking = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="Audiovisual & Networking Solutions in Nigeria | AV, Cabling, SOC | OFATCE"
+        description="Enterprise AV systems, structured cabling, networking, video conferencing (Cisco, Zoom, Teams), automation, and Security Operations Center services across Nigeria by OFATCE Global."
+        path="/audiovisual-networking"
+        jsonLd={avJsonLd}
+      />
       {/* Hero Section - AV/Tech themed */}
       <section className="py-20 bg-av-tech-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

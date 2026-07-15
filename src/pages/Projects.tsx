@@ -46,6 +46,12 @@ const Projects = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="Projects & Case Studies | Oil & Gas and AV/Networking Portfolio | OFATCE"
+        description="Explore OFATCE Global's project portfolio and case studies across Oil & Gas and Audiovisual & Networking — outcome-focused engineering delivery for leading Nigerian organizations."
+        path="/projects"
+        jsonLd={projectsBreadcrumb}
+      />
       <ProjectsHero />
       <ProjectsFilter
         filters={[...filters]}
