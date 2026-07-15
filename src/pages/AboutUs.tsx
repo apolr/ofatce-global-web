@@ -1,5 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Eye, Users, Lightbulb } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "About Us", item: "https://ofatce-global-web.lovable.app/about-us" },
+  ],
+};
 
 const AboutUs = () => {
   const coreValues = [

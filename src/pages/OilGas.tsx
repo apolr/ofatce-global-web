@@ -3,6 +3,28 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Factory, Wrench, Shield, Zap, Users, TrendingUp, Award, Settings, Phone, Mail, ArrowRight, Fuel } from "lucide-react";
 import { portfolioItems } from "@/data/projectsData";
+import SEO from "@/components/SEO";
+
+const oilGasJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+      { "@type": "ListItem", position: 2, name: "Our Businesses", item: "https://ofatce-global-web.lovable.app/our-businesses" },
+      { "@type": "ListItem", position: 3, name: "Oil & Gas", item: "https://ofatce-global-web.lovable.app/oil-gas" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Oil & Gas Engineering Services",
+    provider: { "@type": "Organization", name: "OFATCE Global Limited" },
+    areaServed: "NG",
+    description:
+      "Specialized oil & gas solutions: exploration & production support, infrastructure & project management, maintenance & operational safety, and IoT-enabled technology integration.",
+  },
+];
 
 const OilGas = () => {
   const services = [

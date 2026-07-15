@@ -2,6 +2,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const contactBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://ofatce-global-web.lovable.app/contact" },
+  ],
+};
 
 const Contact = () => {
   return (

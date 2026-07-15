@@ -4,7 +4,17 @@ import ProjectsFilter from "@/components/projects/ProjectsFilter";
 import ProjectsGrid from "@/components/projects/ProjectsGrid";
 import ProjectsMetrics from "@/components/projects/ProjectsMetrics";
 import ProjectsCTA from "@/components/projects/ProjectsCTA";
+import SEO from "@/components/SEO";
 import { portfolioItems, filters, type FilterType } from "@/data/projectsData";
+
+const projectsBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "Projects", item: "https://ofatce-global-web.lovable.app/projects" },
+  ],
+};
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>("All");
