@@ -2,6 +2,16 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Monitor, Factory, ArrowRight, Network, Wrench, Shield, Video, Fuel, Tv } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "Our Businesses", item: "https://ofatce-global-web.lovable.app/our-businesses" },
+  ],
+};
 
 const OurBusinesses = () => {
   const businessLines = [
@@ -51,6 +61,12 @@ const OurBusinesses = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="Our Businesses | Oil & Gas and Audiovisual & Networking | OFATCE"
+        description="Explore OFATCE Global's two specialized business lines: Oil & Gas Solutions and Audiovisual & Networking Solutions — one trusted engineering partner in Nigeria."
+        path="/our-businesses"
+        jsonLd={breadcrumb}
+      />
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4">

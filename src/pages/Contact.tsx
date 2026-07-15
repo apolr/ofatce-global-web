@@ -2,10 +2,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const contactBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://ofatce-global-web.lovable.app/contact" },
+  ],
+};
 
 const Contact = () => {
   return (
     <div className="py-0">
+      <SEO
+        title="Contact OFATCE Global Limited | Port Harcourt & Lagos, Nigeria"
+        description="Contact OFATCE Global Limited — offices in Port Harcourt and Lagos. Call +234 802 863 6198 or email info@ofatceglobal.com to discuss your Oil & Gas or AV/Networking project."
+        path="/contact"
+        jsonLd={contactBreadcrumb}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">

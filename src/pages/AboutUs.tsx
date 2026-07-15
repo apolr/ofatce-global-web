@@ -1,5 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Eye, Users, Lightbulb } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "About Us", item: "https://ofatce-global-web.lovable.app/about-us" },
+  ],
+};
 
 const AboutUs = () => {
   const coreValues = [
@@ -55,6 +65,12 @@ const AboutUs = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="About OFATCE Global Limited | Nigerian Engineering Firm Since 2006"
+        description="Founded in 2006, OFATCE Global Limited is a Nigerian engineering firm delivering Oil & Gas services and Audiovisual & Networking solutions. Learn our history, vision, mission, and values."
+        path="/about-us"
+        jsonLd={breadcrumb}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">

@@ -4,7 +4,17 @@ import ProjectsFilter from "@/components/projects/ProjectsFilter";
 import ProjectsGrid from "@/components/projects/ProjectsGrid";
 import ProjectsMetrics from "@/components/projects/ProjectsMetrics";
 import ProjectsCTA from "@/components/projects/ProjectsCTA";
+import SEO from "@/components/SEO";
 import { portfolioItems, filters, type FilterType } from "@/data/projectsData";
+
+const projectsBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://ofatce-global-web.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "Projects", item: "https://ofatce-global-web.lovable.app/projects" },
+  ],
+};
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>("All");
@@ -36,6 +46,12 @@ const Projects = () => {
 
   return (
     <div className="py-0">
+      <SEO
+        title="Projects & Case Studies | Oil & Gas and AV/Networking Portfolio | OFATCE"
+        description="Explore OFATCE Global's project portfolio and case studies across Oil & Gas and Audiovisual & Networking — outcome-focused engineering delivery for leading Nigerian organizations."
+        path="/projects"
+        jsonLd={projectsBreadcrumb}
+      />
       <ProjectsHero />
       <ProjectsFilter
         filters={[...filters]}
