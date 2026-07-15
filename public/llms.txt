@@ -1,0 +1,25 @@
+# OFATCE Global Limited
+
+> Nigerian engineering services firm delivering specialized Oil & Gas solutions and Audiovisual & Networking services. Founded in 2006 and headquartered in Port Harcourt with a Lagos office.
+
+OFATCE Global Limited operates two business lines under one trusted brand:
+
+- **Oil & Gas Solutions** — exploration & production support, infrastructure & project management, maintenance & operational safety, and IoT-enabled technology integration across upstream, midstream, and downstream operations.
+- **Audiovisual & Networking Solutions** — enterprise networking, structured cabling, audio-visual systems, video conferencing (Cisco, Zoom, Microsoft Teams, Polycom, Logitech), residential and commercial automation, and Security Operations Center (SOC) services.
+
+The company has delivered 250+ projects since 2006 with 99.99% system reliability, serving banking, energy, corporate, and government clients across Nigeria.
+
+## Pages
+- [Home](https://ofatce-global-web.lovable.app/): Overview of the two business lines and company snapshot
+- [About Us](https://ofatce-global-web.lovable.app/about-us): History since 2006, vision, mission, core values, timeline
+- [Our Businesses](https://ofatce-global-web.lovable.app/our-businesses): Combined view of both business lines and their core services
+- [Oil & Gas](https://ofatce-global-web.lovable.app/oil-gas): Detailed services, industry sectors, and featured energy projects
+- [Audiovisual & Networking](https://ofatce-global-web.lovable.app/audiovisual-networking): AV, networking, video conferencing, SOC, and automation services
+- [Projects](https://ofatce-global-web.lovable.app/projects): Portfolio and case studies filterable by business line
+- [Contact](https://ofatce-global-web.lovable.app/contact): Office addresses, phone, email, and inquiry channels
+
+## Contact
+- Port Harcourt: #11 Trans Woji road, Port Harcourt, Rivers State, Nigeria
+- Lagos: 105 Igi Olugbin Street, Palmgrove, Lagos, Nigeria
+- Phone: +234 802 863 6198, +234 805 349 4883
+- Email: info@ofatceglobal.com, ofatceglobal@yahoo.co.uk
