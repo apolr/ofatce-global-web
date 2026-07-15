@@ -118,7 +118,7 @@ const Home = () => {
       </section>
 
       {/* Business Line Selection */}
-      <section id="business-lines" className="py-24 bg-muted">
+      <section id="business-lines" className="py-24 bg-muted scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-responsive-3xl font-poppins font-bold text-primary mb-4">
