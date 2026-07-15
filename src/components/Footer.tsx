@@ -72,7 +72,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <p className="text-primary-foreground/70 text-sm">
-                  #37 Etitinwo Street, off Elekahia Road<br />
+                  #11 Trans Woji road,<br />
                   Port Harcourt, Rivers State, Nigeria<br />
                   <br />
                   105, Igi Olugbin Street Palmgrove, Lagos, Nigeria
